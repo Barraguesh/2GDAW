@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script language="JavaScript">
+            var numeroDNI = prompt("Introduce tu DNI");
+            var letraDNI = numeroDNI.substr(8,9);
+            var arrayLetrasDNI = ["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"];
+            if (Number.isInteger(parseInt(numeroDNI))){
+                resto = parseInt(numeroDNI) % 23;
+                letraCalculadaDNI = arrayLetrasDNI [resto];
+                if (letraCalculadaDNI == letraDNI){
+                    alert("La letra corresponde con el número de DNI");
+                } else {
+                    alert("La letra NO corresponde con el número de DNI");
+                }
+            } else {
+                alert("Introcuzca un número válido");
+                close();
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script language="JavaScript">
+            var numeros = prompt("Introduce 5 números con comas entre ellos");
+            var arrayNumeros = [];
+            var temp = "";
+            debugger;
+            for (var i =0; i < numeros.length; i++){
+                if (numeros.charAt(i) != ","){
+                    temp = temp + numeros.charAt(i);
+                } else {
+                    arrayNumeros.push(temp);
+                    temp = "";
+                }
+            }
+            for(var tm in arrayNumeros){
+                temp = temp + tm;
+            }
+            alert(temp);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
