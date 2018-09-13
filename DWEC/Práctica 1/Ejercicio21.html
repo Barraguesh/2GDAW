@@ -4,8 +4,8 @@
         <script language="JavaScript">
             var numeros = prompt("Introduce 5 números con comas entre ellos");
             var arrayNumeros = [];
+            var suma = 0;
             var temp = "";
-            debugger;
             for (var i =0; i < numeros.length; i++){
                 if (numeros.charAt(i) != ","){
                     temp = temp + numeros.charAt(i);
@@ -14,10 +14,12 @@
                     temp = "";
                 }
             }
-            for(var tm in arrayNumeros){
-                temp = temp + tm;
+            arrayNumeros.push(temp);
+            temp = "";
+            for(var i = 0; i < arrayNumeros.length; i++){
+                suma = parseInt(arrayNumeros[i]) + suma;
             }
-            alert(temp);
+            alert("La suma de los 5 numeros es: " + suma);
         </script>
     </head>
     <body>
