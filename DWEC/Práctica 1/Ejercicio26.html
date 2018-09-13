@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script language="JavaScript">
+            var cadena = prompt("Introduce una frase en minúsculas");
+            var a = 0,e = 0,i = 0,o = 0,u = 0;
+            for(var x = 0;x < cadena.length;x++){
+                if(cadena.charAt(x) == "a"){
+                    a++;
+                } else if(cadena.charAt(x) == "e"){
+                    e++;
+                } else if(cadena.charAt(x) == "i"){
+                    i++;
+                } else if(cadena.charAt(x) == "o"){
+                    o++;
+                } else if(cadena.charAt(x) == "u"){
+                    u++;
+                }
+            }
+            porcientoAd = a / cadena.length * 100;
+            porcientoA = porcientoAd.toFixed();
+            porcientoEd = e / cadena.length * 100;
+            porcientoE = porcientoEd.toFixed();
+            porcientoId = i / cadena.length * 100;
+            porcientoI = porcientoId.toFixed();
+            porcientoOd = o / cadena.length * 100;
+            porcientoO = porcientoOd.toFixed();
+            porcientoUd = u / cadena.length * 100;
+            porcientoU = porcientoUd.toFixed();
+            alert("Hay " + porcientoA + "% de a, " + porcientoE + "% de e, " + porcientoI + "% de i, " + porcientoO + "% de O, " + porcientoU + "% de U, ");
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

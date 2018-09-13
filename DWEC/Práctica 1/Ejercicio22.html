@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script language="JavaScript">
+            var numero = prompt("Introduzca el dato");
+            console.log("Número" + parseInt(numero));
+            var multiplicacion = 1;
+            for (var i = 0;i < parseInt(numero);i++){
+                resta = parseInt(numero) - i;
+                console.log("Resta" + resta);
+                multiplicacion = multiplicacion * resta;
+                console.log("Multiplicacion" + multiplicacion);
+            }
+            alert("El factorial de " + parseInt(numero) + " es " + multiplicacion);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
