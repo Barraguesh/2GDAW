@@ -2,32 +2,56 @@
 <html>
     <head>
         <script language="JavaScript">
-            var cadena = prompt("Introduce una frase en minúsculas");
-            var a = 0,e = 0,i = 0,o = 0,u = 0;
-            for(var x = 0;x < cadena.length;x++){
-                if(cadena.charAt(x) == "a"){
-                    a++;
-                } else if(cadena.charAt(x) == "e"){
-                    e++;
-                } else if(cadena.charAt(x) == "i"){
-                    i++;
-                } else if(cadena.charAt(x) == "o"){
-                    o++;
-                } else if(cadena.charAt(x) == "u"){
-                    u++;
+            var array = [1,2,3,4,5];
+            var arrayUsuario = prompt("Introduce números separados por comas").split(",");
+            //Parte 1
+            var pares = "";
+            for(var i = 0;i < array.length;i++){
+                if(parseInt(array[i]) % 2 == 0){
+                    pares = pares + array[i] + ",";
                 }
             }
-            porcientoAd = a / cadena.length * 100;
-            porcientoA = porcientoAd.toFixed();
-            porcientoEd = e / cadena.length * 100;
-            porcientoE = porcientoEd.toFixed();
-            porcientoId = i / cadena.length * 100;
-            porcientoI = porcientoId.toFixed();
-            porcientoOd = o / cadena.length * 100;
-            porcientoO = porcientoOd.toFixed();
-            porcientoUd = u / cadena.length * 100;
-            porcientoU = porcientoUd.toFixed();
-            alert("Hay " + porcientoA + "% de a, " + porcientoE + "% de e, " + porcientoI + "% de i, " + porcientoO + "% de O, " + porcientoU + "% de U, ");
+            alert("Los numeros pares del primer array son: " + pares);
+
+            //Parte 2
+            var valorUsuario = prompt("Introduce un valor para buscar");
+            var string = "Se ha encontrado el valor " + valorUsuario + " en la/s posicion/es: ";
+            for(var i = 0;i < arrayUsuario.length;i++){
+                if(valorUsuario == arrayUsuario[i]){
+                     string = string + i + ", ";
+                }
+            }
+            alert(string);
+            valorUsuario = parseInt(prompt("Introduce un número para buscar mayores a dicho número"));
+            string = "Los valores mayores de " + valorUsuario + " son: ";
+            for(var i = 0;i < arrayUsuario.length;i++){
+                if(valorUsuario < arrayUsuario[i]){
+                     string = string + arrayUsuario[i] + " en la posición " + i + ", ";
+                }
+            }
+            alert(string);
+
+            //Parte 3
+            string = array.toString();
+
+            //Parte 4
+            arrayUsuario.shift();
+            arrayUsuario.pop();
+            arrayUsuario.splice(parseInt(arrayUsuario) / 2);
+            console.log(arrayUsuario);
+
+            //Parte 5
+            var arraysJuntos = arrayUsuario.concat(array);
+            alert(arraysJuntos);
+
+            //Parte 6 problemos!!!!!!!!!!!!!!!!!!!!!!!!!!
+            string = "Los valores primos del nuevo array son: ";
+            for(var i = 2;i < arraysJuntos.length;i++){
+                if(arraysJuntos[i] % i !== 0){
+                     string = string + arraysJuntos[i] + " en la posición " + i + ", ";
+                }
+            }
+            alert(string);
         </script>
     </head>
     <body>

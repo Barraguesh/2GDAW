@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script language="JavaScript">
+            var array = [[3,5,8],[4,4,8],[1,2,3]];
+            for(var i = 0;i < array.length;i++){
+                array[i][2] = parseInt(array[i][0]) + parseInt(array[i][1]);
+            }
+            for(var i = 0;i < array.length;i++){
+                if(i == 0){
+                    string = array[i][0] + " + " + array[i][1] + " = " + array[i][2];
+                }else{
+                    string = string + "\n" + array[i][0] + " + " + array[i][1] + " = " + array[i][2];
+                }
+            }
+            alert(string);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
