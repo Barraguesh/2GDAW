@@ -2,7 +2,8 @@
 <html>
     <head>
         <script language="JavaScript">
-            var cadena = prompt("Introduce una frase en minúsculas");
+            var cadena = prompt("Introduce una frase").toLowerCase();
+            cadena = cadena.replace(" ","");
             var a = 0,e = 0,i = 0,o = 0,u = 0;
             for(var x = 0;x < cadena.length;x++){
                 if(cadena.charAt(x) == "a"){

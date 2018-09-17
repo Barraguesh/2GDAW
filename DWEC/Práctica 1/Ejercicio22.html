@@ -3,13 +3,9 @@
     <head>
         <script language="JavaScript">
             var numero = prompt("Introduzca el dato");
-            console.log("Número" + parseInt(numero));
             var multiplicacion = 1;
             for (var i = 0;i < parseInt(numero);i++){
-                resta = parseInt(numero) - i;
-                console.log("Resta" + resta);
-                multiplicacion = multiplicacion * resta;
-                console.log("Multiplicacion" + multiplicacion);
+                multiplicacion = multiplicacion * (parseInt(numero) - i);
             }
             alert("El factorial de " + parseInt(numero) + " es " + multiplicacion);
         </script>
