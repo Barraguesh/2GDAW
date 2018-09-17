@@ -9,6 +9,7 @@ h1{
 }
 .lista{
     width: 200px;
+    float: left;
 }
 .descripcion{
     width: 500px;
