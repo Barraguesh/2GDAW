@@ -1,0 +1,15 @@
+body{
+    width: 960px;
+    margin-left: 540px;
+    position: relative;
+    display: inline-block;
+}
+h1{
+    text-align: center;
+}
+.lista{
+    width: 200px;
+}
+.descripcion{
+    width: 500px;
+}
