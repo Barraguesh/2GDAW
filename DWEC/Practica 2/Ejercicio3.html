@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script language="JavaScript">
+            var cadena = prompt("Introduce una frase");
+            var mensaje = "No es palíndromo";
+            cadena = cadena.replace(/ /g,"");
+            cadena = cadena.toLowerCase();
+            cadena = cadena.split("");
+            var cadena2 = cadena.slice();
+            console.log(cadena2);
+            cadena = cadena.reverse();
+            cadena = cadena.toString();
+            console.log(cadena);
+            console.log(cadena2);
+            if(cadena == cadena2){
+                mensaje = "Es un palíndromo";
+            }
+            alert(mensaje);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

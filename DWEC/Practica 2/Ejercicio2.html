@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script language="JavaScript">
+            var cadena = prompt("Introduce una frase");
+            var mayus = 0, minus = 0;
+            cadena = cadena.replace(/ /g,"");
+            cadena = cadena.split("");
+            for(var i = 0;i < cadena.length;i++){
+                temp = cadena[i].toString();
+                if(temp == temp.toUpperCase()){
+                    mayus++;
+                    console.log("Mayus: " + mayus);
+                }else if(temp == temp.toLowerCase()){
+                    minus++;
+                    console.log("Minus" + minus);
+                }
+            }
+            if(mayus > 0 && minus > 0){
+                alert("La frase tiene tanto mayúsculas como minúsculas");
+            }else if(mayus > 0){
+                alert("La frase tiene todo en mayúsculas");
+            }else if(minus > 0){
+                alert("La frase tiene todo en minúsculas");
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
