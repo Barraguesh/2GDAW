@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script language="JavaScript">
+            var valoresUsuario = prompt("Introduce 4 números").split("");
+            var valoresOrdenador = [1,2,3,4];
+            var muertos = 0;
+            var heridos = 0;
+            for(var i = 0;i < valoresOrdenador.length();i++){
+                for(var x = 0;i < valoresUsuario.length();x++){
+                    if(valoresUsuario[i] == valoresOrdenador[i]){
+                        muertos++;
+                    }else if(valoresUsuario[x] == valoresOrdenador[i]){
+                        heridos++;
+                    }
+                }
+            }
+            alert("Hay " + heridos + )
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
