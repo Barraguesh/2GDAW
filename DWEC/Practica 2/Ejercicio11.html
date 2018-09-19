@@ -5,7 +5,7 @@
             var hoy = new Date();
             var diaEnMS = 1000 * 60 * 60 * 24;
             var navidad = new Date(hoy.getFullYear(), 11, 25); //JavaScript tiene los meses de 0 a 11
-            alert("Faltan " + Math.ceil((navidad.getTime()-hoy.getTime()) / (diaEnMS)) + " días hasta navidad.")
+            alert("Faltan " + Math.trunc((navidad.getTime()-hoy.getTime()) / (diaEnMS)) + " días hasta navidad.")
         </script>
     </head>
     <body>
