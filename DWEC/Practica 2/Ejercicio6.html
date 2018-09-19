@@ -2,20 +2,37 @@
 <html>
     <head>
         <script language="JavaScript">
-            var valoresUsuario = prompt("Introduce 4 números").split("");
             var valoresOrdenador = [1,2,3,4];
-            var muertos = 0;
-            var heridos = 0;
-            for(var i = 0;i < valoresOrdenador.length();i++){
-                for(var x = 0;i < valoresUsuario.length();x++){
-                    if(valoresUsuario[i] == valoresOrdenador[i]){
+            for (let i = 0;i < 3;i++) {
+                var numeroAleatorio = Math.random() * 10;
+                valoresOrdenador[i] = Math.trunc(numeroAleatorio);
+            }
+            console.log(valoresOrdenador);
+            var fin = false;
+            do{
+                var contador = [0,0,0,0];
+                var muertos = 0;
+                var heridos = 0;
+                var valoresUsuario = prompt("Introduce 4 números").split("");
+                for(var i = 0;i < valoresOrdenador.length;i++){
+                    if(valoresUsuario[i] == valoresOrdenador[i] && contador[i] != 2){
                         muertos++;
-                    }else if(valoresUsuario[x] == valoresOrdenador[i]){
-                        heridos++;
+                        contador[i] = 2;
+                    }
+                    for(var x = 0;x < valoresUsuario.length;x++){
+                        if(valoresUsuario[x] == valoresOrdenador[i] && contador[i] == 0){
+                            heridos++;
+                            contador[i] = 1;
+                        }
                     }
                 }
+                alert("Hay " + heridos + " heridos y " + muertos + " muertos.");
+                if(muertos == valoresOrdenador.length){
+                    fin = true;
+                }
             }
-            alert("Hay " + heridos + " heridos y " + muertos + " muertos.");
+            while(fin == false);
+            alert("¡Has ganado!");
         </script>
     </head>
     <body>

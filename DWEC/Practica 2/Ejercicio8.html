@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script language="JavaScript">
+            var numerosUsuario = prompt("Introduce los numeros que quieras separados por comas").split(",");
+            var positivos = 0, negativos = 0, nulos = 0;
+            for (var i = 0;i < numerosUsuario.length;i++) {
+                if(Math.sign(numerosUsuario[i]) == 1){
+                    positivos++;
+                }else if(Math.sign(numerosUsuario[i]) == 0){
+                    nulos++;
+                }else if(Math.sign(numerosUsuario[i]) == -1){
+                    negativos++;
+                }
+            }
+            alert("Hay " + positivos + " números positivos, " + nulos + " nulos y " + negativos + " negativos.");
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

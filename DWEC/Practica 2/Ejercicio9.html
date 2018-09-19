@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script language="JavaScript">
+            var mayor = 0;
+            var menor = 0;
+            do{
+                var numeroUsuario = prompt("Introduce un numero");
+                if(numeroUsuario > mayor){
+                    mayor = numeroUsuario;
+                }else if(numeroUsuario < menor){
+                    menor = numeroUsuario;
+                }
+            }
+            while (confirm("¿Deseas continuar?") == true);
+            alert("Numero mayor: " + mayor + " numero menor: " + menor);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
