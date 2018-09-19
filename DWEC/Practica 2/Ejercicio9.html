@@ -6,11 +6,7 @@
             var menor = 0;
             do{
                 var numeroUsuario = prompt("Introduce un numero");
-                if(numeroUsuario > mayor){
-                    mayor = numeroUsuario;
-                }else if(numeroUsuario < menor){
-                    menor = numeroUsuario;
-                }
+                numeroUsuario > mayor ? mayor = numeroUsuario : menor = numeroUsuario; //Operador ternario
             }
             while (confirm("¿Deseas continuar?") == true);
             alert("Numero mayor: " + mayor + " numero menor: " + menor);

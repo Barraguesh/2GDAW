@@ -7,10 +7,10 @@
             for (var i = 0;i < numerosUsuario.length;i++) {
                 if(Math.sign(numerosUsuario[i]) == 1){
                     positivos++;
-                }else if(Math.sign(numerosUsuario[i]) == 0){
-                    nulos++;
                 }else if(Math.sign(numerosUsuario[i]) == -1){
                     negativos++;
+                }else{
+                    nulos++;
                 }
             }
             alert("Hay " + positivos + " números positivos, " + nulos + " nulos y " + negativos + " negativos.");

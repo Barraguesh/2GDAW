@@ -3,9 +3,16 @@
     <head>
         <script language="JavaScript">
             var valoresOrdenador = [1,2,3,4];
-            for (let i = 0;i < 3;i++) {
+            var repetido = [];
+            var x = 0;
+            for (let i = 0;x < 3;i++) { //Arreglar
                 var numeroAleatorio = Math.random() * 10;
-                valoresOrdenador[i] = Math.trunc(numeroAleatorio);
+                for (let i = 0; i < repetido.length; i++) {
+                    if (numeroAleatorio != repetido[i]){
+                        valoresOrdenador[i] = Math.trunc(numeroAleatorio);
+                        x++;
+                    }
+                }
             }
             console.log(valoresOrdenador);
             var fin = false;
