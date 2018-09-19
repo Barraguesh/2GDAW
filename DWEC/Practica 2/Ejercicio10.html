@@ -4,12 +4,10 @@
         <script language="JavaScript">
             var fecha = new Date();
             var fechas = [];
-            var i = 0;
             for (var i = 2017; i < 2050; i++) {
                 fecha = new Date(i, 0, 1);
                 if(fecha.getDay() == 0){
                     fechas.push(fecha.getFullYear());
-                    i++;
                 }
             }
             alert("Los 1 de enero que caen en domingo son en los años: " + fechas.toString());
