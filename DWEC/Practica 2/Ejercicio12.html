@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <script language="JavaScript">
             var hoy = new Date();
             hoy = new Date(hoy.getFullYear(), hoy.getMonth(), hoy.getDate());
             var fechaNacimientoUsuario = prompt("Introduce la fecha de naviciemto (aaaa/mm/dd)").split("/");
-            var fechaNacimiento = new Date(fechaNacimientoUsuario[0],fechaNacimientoUsuario[1],fechaNacimientoUsuario[2]);
+            var fechaNacimiento = new Date(fechaNacimientoUsuario[0], fechaNacimientoUsuario[1], fechaNacimientoUsuario[2]);
             var diaEnMS = 1000 * 60 * 60 * 24;
-            alert("El nacido en esa fecha tiene " + Math.trunc(Math.ceil((hoy.getTime()-fechaNacimiento.getTime()) / (diaEnMS)) / 365) + " años.")
+            alert("El nacido en esa fecha tiene " + Math.trunc(Math.ceil((hoy.getTime() - fechaNacimiento.getTime()) / (diaEnMS)) / 365) + " años.")
         </script>
     </head>
+
     <body>
     </body>
+
 </html>

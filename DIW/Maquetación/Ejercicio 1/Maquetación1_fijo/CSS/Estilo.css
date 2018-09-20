@@ -1,25 +1,30 @@
-body{
+body {
     width: 960px;
     margin-left: 400px;
 }
-h1{
+
+h1 {
     text-align: center;
 }
-#columna1{
+
+#columna1 {
     width: 260px;
     padding-bottom: 600px;
     float: left;
 }
-#columna2{
+
+#columna2 {
     width: 700px;
     margin-left: 260px;
 }
-#columna2 li{
+
+#columna2 li {
     list-style-type: none;
     float: left;
     width: 200px;
     margin-right: 10px;
 }
-#columna2 li:first-of-type{
+
+#columna2 li:first-of-type {
     margin-left: -40px;
 }
