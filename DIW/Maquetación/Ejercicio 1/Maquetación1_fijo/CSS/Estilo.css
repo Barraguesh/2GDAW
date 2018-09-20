@@ -2,15 +2,20 @@ body{
     width: 960px;
     margin-left: 540px;
     position: relative;
-    display: inline-block;
 }
 h1{
     text-align: center;
+    display: block;
+    margin: 0 auto;
 }
-.lista{
-    width: 200px;
+#lista{
+    width: 260px;
+    padding-bottom: 600px;
     float: left;
 }
-.descripcion{
-    width: 500px;
+#contenidoLista li{
+    list-style-type: none;
+    float: left;
+    width: 200px;
+    margin-right: 10px;
 }
