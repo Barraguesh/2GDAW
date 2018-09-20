@@ -1,21 +1,25 @@
 body{
     width: 960px;
-    margin-left: 540px;
-    position: relative;
+    margin-left: 400px;
 }
 h1{
     text-align: center;
-    display: block;
-    margin: 0 auto;
 }
-#lista{
+#columna1{
     width: 260px;
     padding-bottom: 600px;
     float: left;
 }
-#contenidoLista li{
+#columna2{
+    width: 700px;
+    margin-left: 260px;
+}
+#columna2 li{
     list-style-type: none;
     float: left;
     width: 200px;
     margin-right: 10px;
+}
+#columna2 li:first-of-type{
+    margin-left: -40px;
 }

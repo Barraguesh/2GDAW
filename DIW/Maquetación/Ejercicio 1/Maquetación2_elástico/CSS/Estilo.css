@@ -1,6 +1,6 @@
 body{
     width: 60em;
-    margin: 0 auto;
+    margin: 0em auto;
 }
 h1{
     text-align: center;
@@ -13,4 +13,12 @@ h1{
 #columna2{
     width: 44em;
     float: left;
+}
+#columna2 li{
+    list-style-type: none;
+    float: left;
+    width: 14em;
+}
+#columna2 li:first-of-type{
+    margin-left: -2.5em;
 }
