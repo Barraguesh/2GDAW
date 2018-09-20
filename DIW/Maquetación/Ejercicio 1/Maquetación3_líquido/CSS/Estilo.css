@@ -1,26 +1,32 @@
-#cuerpo{
-    width: 80%; /*Queda igual que las anteriores con 60%*/
+#cuerpo {
+    width: 80%;
+    /*Queda igual que las anteriores con 60%*/
     margin: 0 auto;
 }
-h1{
+
+h1 {
     text-align: center;
 }
-#columna1{
+
+#columna1 {
     width: 20%;
     padding-bottom: 50%;
     float: left;
     margin-right: 2%;
 }
-#columna2{
+
+#columna2 {
     width: 60%;
     float: left;
 }
-#columna2 li{
+
+#columna2 li {
     list-style-type: none;
     float: left;
     width: 33%;
 }
-#columna2 li:first-of-type{
+
+#columna2 li:first-of-type {
     margin-left: -4.5%;
     margin-right: 2%;
 }
