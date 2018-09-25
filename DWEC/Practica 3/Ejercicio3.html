@@ -2,65 +2,29 @@
 <html>
 
     <head>
-        <link rel="stylesheet" type="text/css" href="Estilo.css">
         <script language="JavaScript">
-            //Funciona solo en firefox
-            function getCookie(name) {
-                var nameEQ = name + "=";
-                var ca = document.cookie.split(';');
-                for(var i=0;i < ca.length;i++) {
-                var c = ca[i];
-                while (c.charAt(0)==' ') c = c.substring(1);
-                if (c.indexOf(nameEQ) != -1) return c.substring(nameEQ.length,c.length);
-                }
-                return null;
-            }
-
-            function setCookie(c_name, value, exdays) {
-                var exdate = new Date();
-                exdate.setDate(exdate.getDate() + exdays);
-                var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
-                document.cookie = c_name + "=" + c_value;
-            }
-
-            function PonerCookie() {
-                setCookie('tiendaaviso', '1', 365);
-                document.getElementById("barraaceptacion").style.display = "none";
-                document.getElementById("div").style.display = "block";
-                document.getElementById("h1").style.display = "none";
-            }
-
-            function CogerDatos() {
-                //setCookie("Nombre", encodeURIComponent(document.getElementById("name").value.toString()), 365);
-                setCookie("Color", document.getElementById("color").value.toString(), 365);
-                setCookie("Provincia", document.getElementById("provincia").value.toString(), 365);
-                ExposeDatos();
+            function GuardarDatos() {
+                localStorage.setItem("Nombre",document.getElementById("name").value.toString());
+                localStorage.setItem("Color",document.getElementById("color").value.toString());
+                localStorage.setItem("Provincia",document.getElementById("provincia").value.toString());
+                alert("Ya sabemos quien eres, sal de la web y vuelve a entrar, rellenaremos las cajas por ti");
             }
 
             function ExposeDatos(){
-                alert("Tenemos toda tu información \n Tu nombre: " + getCookie('Nombre') + "\n Tu color favorito: " + getCookie('Color') + "\n Y tu provincia: " + getCookie('Provincia'));
+                document.getElementById("name").value = localStorage.getItem("Nombre");
+                document.getElementById("color").value = localStorage.getItem("Color");
+                document.getElementById("provincia").value = localStorage.getItem("Provincia");
             }
         </script>
     </head>
 
-    <body>
-        <h1 id="h1">Por favor, acepta las cookies para ver la página</h1>
+    <body onLoad="ExposeDatos();">
         <div id="div">
             Nombre: <input id="name" type="text" name="nombre"><br/>
             Color que te gusta: <input id="color" type="text" name="color"><br/>
             Provincia donde vives: <input id="provincia" type="text" name="provincia"><br/>
-            <button onclick="CogerDatos();">Enviar datos</button>
+            <button onclick="GuardarDatos();">Enviar datos</button>
         </div>
-        <!--//BLOQUE COOKIES-->
-        <div id="barraaceptacion" style="display: block;">
-            <div class="inner">
-                Solicitamos su permiso para obtener datos estadísticos de su navegación en esta web, en cumplimiento del Real
-                Decreto-ley 13/2012. Si continúa navegando consideramos que acepta el uso de cookies.
-                <a class="ok" onclick="PonerCookie();" href="javascript:void(0);"><b>OK</b></a> |
-                <a class="info" href="http://politicadecookies.com" target="_blank">Más información</a>
-            </div>
-        </div>
-        <!--//FIN BLOQUE COOKIES-->
     </body>
 
 </html>

@@ -7,11 +7,11 @@
             //No funciona en chrome, si en firefox y edge
             function getCookie(name) {
                 var nameEQ = name + "=";
-                var ca = document.cookie.split(';');
+                var ca = document.cookie;
                 for(var i=0;i < ca.length;i++) {
-                var c = ca[i];
-                while (c.charAt(0)==' ') c = c.substring(1);
-                if (c.indexOf(nameEQ) != -1) return c.substring(nameEQ.length,c.length);
+                    var c = ca[i];
+                    while (c.charAt(0)==' ') c = c.substring(1);
+                        if (c.indexOf(nameEQ) != -1) return c.substring(nameEQ.length,c.length);
                 }
                 return null;
             }
@@ -31,8 +31,7 @@
             }
 
             function CogerDatos() {
-                document.cookie = "Nombre=" + document.getElementById("name").value.toString();
-                //setCookie("Nombre", encodeURIComponent(document.getElementById("name").value.toString()), 365);
+                setCookie("Nombre", encodeURIComponent(document.getElementById("name").value.toString()), 365);
                 setCookie("Color", document.getElementById("color").value.toString(), 365);
                 setCookie("Provincia", document.getElementById("provincia").value.toString(), 365);
                 ExposeDatos();
