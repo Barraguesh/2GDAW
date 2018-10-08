@@ -1,0 +1,20 @@
+li {
+    padding: 10px;
+    list-style: none;
+    width: 115px;
+    height: 15px;
+    background-color: blue;
+    text-align: center;
+    margin-bottom: 5px;
+    border: 2px solid blue;
+}
+
+li:hover {
+    border: 2px solid red;
+}
+
+a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}

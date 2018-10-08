@@ -12,3 +12,22 @@ h1 {
     text-align: center;
     text-transform: uppercase;
 }
+
+h2 {
+    font-family: Cambria, Times, serif;
+    color: #632423;
+    font-size: 24px;
+    letter-spacing: 0.5;
+    word-spacing: 1.5em;
+    text-transform: uppercase;
+}
+
+li {
+    font-style: italic;
+    font-weight: bold;
+}
+
+li strong {
+    font-weight: normal;
+    font-variant: small-caps;
+}
