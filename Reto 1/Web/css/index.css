@@ -1,0 +1,286 @@
+:root {
+    --first-margin-left: 25%;
+    --second-margin-left: 0%;
+    --margin: 25%;
+}
+
+body {
+    background-color: #f2f0f4;
+    font-family: Verdana, Calibri, serif;
+}
+
+nav {
+    margin: 30px auto;
+    background-color: #7fc7af;
+    width: 30%;
+    border-radius: 40px;
+    padding: 15px;
+    text-align: center;
+}
+
+.boton,
+.boton.efectoclick {
+    margin-right: 10%;
+    padding: 5px;
+    text-align: center;
+    transition-duration: 0.4s;
+    font-size: 14px;
+    background-color: #7fc7af;
+    text-transform: uppercase;
+    border: 2px hidden #7fc7af;
+    border-top-style: solid;
+    border-bottom-style: solid;
+}
+
+.boton:hover, .boton:focus, .boton.efectoclick {
+    border: 2px solid #3d3b3c;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    outline: none;
+}
+
+.icono {
+    width: 15px;
+    height: auto;
+    margin-right: 5px;
+}
+
+#estadisticas {
+    position: absolute;
+    left: 76.3%;
+    right: auto;
+    padding: 15px;
+    border: none;
+    font-size: 14px;
+    background-color: #7fc7af;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition-duration: 0.4s;
+}
+
+#estadisticas:focus {
+    outline: none;
+}
+
+#btn_origen {
+    float: left;
+    position: absolute;
+    left: 13%;
+    right: auto;
+    width: 10%;
+    padding: 15px;
+    border: none;
+    font-size: 14px;
+    background-color: #7fc7af;
+    border-radius: 10px;
+}
+
+#btn_origen:active {
+    transform: translateY(4px);
+}
+
+#btn_reset {
+    float: left;
+    position: absolute;
+    left: auto;
+    right: 13%;
+    width: 10%;
+    padding: 15px;
+    border: none;
+    font-size: 14px;
+    background-color: #7fc7af;
+    border-radius: 10px;
+}
+
+#gif {
+    display: none;
+}
+
+#datos {
+    float: left;
+    position: absolute;
+    left: 13%;
+    right: auto;
+    border: #ffb84d 2px dotted;
+    width: 9%;
+    height: 200px;
+    padding: 10px;
+}
+
+div #datos span {
+    display: block;
+    margin-top: 10%;
+    margin-left: 4%;
+    color: black;
+    word-wrap: break-word;
+}
+
+#elementoAjax {
+    margin: 0 auto;
+    width: 50%;
+    height: 550px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+#elementoAjax h1 {
+    margin-top: 200px;
+    font-size: 500%;
+    text-align: center;
+}
+
+/*Animacion esquema*/
+#esquema {
+    background-color: #ffb84d;
+    width: 5%;
+    height: 50px;
+    color: white;
+    position: relative;
+    transition: margin-left 4s;
+    margin-left: 29%;
+    border: #cc9240 2px dashed;
+}
+
+/*Fin animacion*/
+div#posicionesEsquema {
+    width: 50%;
+    margin: 0 auto;
+}
+
+div#posicionesEsquema label.pos1,
+div#posicionesEsquema label.pos2,
+div#posicionesEsquema label.pos3,
+div#posicionesEsquema label.pos4 {
+    display: block;
+    width: 25%;
+    text-align: center;
+    padding: 0;
+    float: left;
+}
+
+#hrtop {
+    margin-top: 84px;
+}
+
+footer {
+    text-align: center;
+    text-decoration: none;
+}
+
+footer p a {
+    margin-top: 1%;
+    color: black;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+footer p a:visited {
+    color: black;
+}
+
+footer p a img {
+    padding: 1%;
+}
+
+footer p#sbl {
+    width: 256px;
+    height: 144px;
+    margin: 0 auto;
+}
+
+footer p#sbl img {
+    width: 100%;
+    height: auto;
+}
+
+#logos {
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+/* Modos (Automático, Manual y Por Cotas) */
+.principal {
+    margin: auto;
+    width: 50%;
+}
+
+.botonPrincipal {
+    width: 100%;
+    border: 1px #f2f0f4 solid;
+    color: #f2f0f4;
+    background-color: #01363f;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+}
+
+table+.botonPrincipal {
+    margin-top: 50px;
+}
+
+.botonPrincipal+.botonPrincipal {
+    margin-top: 50px;
+}
+
+.principal table {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.principal label {
+    color: black;
+}
+
+.principal input {
+    font-family: Verdana, Calibri, serif;
+}
+
+.principal span.saltoLinea {
+    visibility: hidden;
+    color: transparent;
+}
+
+/*  Diseño móvil */
+@media (max-width: 450px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    body, .principal {
+        width: 90%;
+    }
+
+    nav, #estadisticas, #btn_origen, #elementoAjax, #btn_reset, footer {
+        width: 100%;
+    }
+
+    #datos, #esquema, #posicionesEsquema, hr {
+        display: none;
+    }
+
+    .boton,
+    .boton.efectoclick {
+        width: 100%;
+    }
+
+    #estadisticas, #btn_origen, #btn_reset {
+        position: static;
+        margin-bottom: 30px;
+    }
+
+    #elementoAjax {
+        height: auto;
+    }
+
+    #elementoAjax h1 {
+        font-size: 250%;
+        margin: 0 auto;
+    }
+}

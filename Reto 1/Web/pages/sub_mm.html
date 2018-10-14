@@ -1,0 +1,48 @@
+<!-- AWP_In_Variable Name='"WEB_1".POSITION_1' -->
+<!-- AWP_In_Variable Name='"WEB_1".POSITION_2' -->
+<!-- AWP_In_Variable Name='"WEB_1".POSITION_3' -->
+<!-- AWP_In_Variable Name='"WEB_1".POSITION_4' -->
+<!-- AWP_In_Variable Name='"WEB_1".SPEED_1' -->
+<!-- AWP_In_Variable Name='"WEB_1".BOTON_MM' -->
+<!-- AWP_In_Variable Name='"WEB_1".Empaquetar' -->
+<!-- AWP_In_Variable Name='"WEB_1".Sellar'-->
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <div class="principal">
+        <table>
+            <tr>
+                <th colspan="2"><label for="position1" >Posición</label></th>
+            </tr>
+            <tr>
+                <th><label for="position1">Posición 1</label></th>
+                <td><input id="position1" name="'WEB_1'.POSITION_1" type="number" placeholder="Distancia (mm)" autofocus/></td>
+            </tr>
+            <tr>
+                <th><label for="position2">Posición 2</label></th>
+                <td><input id="position2" name="'WEB_1'.POSITION_2" type="number" placeholder="Distancia (mm)" /></td>
+            </tr>
+            <tr>
+                <th><label for="position3">Posición 3</label></th>
+                <td><input id="position3" name="'WEB_1'.POSITION_3" type="number" placeholder="Distancia (mm)" /></td>
+            </tr>
+            <tr>
+                <th><label for="position4">Posición 4</label></th>
+                <td><input id="position4" name="'WEB_1'.POSITION_4" type="number" placeholder="Distancia (mm)" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><span class="saltoLinea">0</span></td>
+            </tr>
+            <tr>
+                <th colspan="2"><label for="speed" >Velocidad</label></th>
+            </tr>
+            <tr>
+                <td colspan="2"><input id="speed" name="'WEB_1'.SPEED_1" type="number"  placeholder="Velocidad (mm/s)"/></td>
+            </tr>
+        </table>
+        <button id="submit" class="botonPrincipal" name="'WEB_1'.BOTON_MM" type="button" onclick="alternarMM()">INICIAR</button>
+        <button id="mm_empaquetar" class="botonPrincipal" onclick="enviarSennalxx('Empaquetar',true)" disabled="true">Empaquetar</button>
+        <button id="mm_sellar" class="botonPrincipal" onclick="enviarSennalxx('Sellar',true)" disabled="true">Sellar</button>
+    </div>
+</body>
+</html>

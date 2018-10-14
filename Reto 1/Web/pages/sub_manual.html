@@ -1,0 +1,13 @@
+<!-- AWP_In_Variable Name='"WEB_1".ADELANTE' -->
+<!-- AWP_In_Variable Name='"WEB_1".ATRAS' -->
+<!-- AWP_In_Variable Name='"WEB_1".BOTON_MANUAL'-->
+<!DOCTYPE html>
+<html lang="es">
+    <body>
+        <div class="principal">
+                <button class="botonPrincipal" id="manBotonMan" onclick="alternarManual()">INICIAR</button>
+                <button class="botonPrincipal" id="manAdelante" onclick="enviarSennal('ADELANTE',this.id,'manAtras')" value="libre" disabled=true>ADELANTE</button>
+                <button class="botonPrincipal" id="manAtras" onclick="enviarSennal('ATRAS',this.id,'manAdelante') " value="libre" disabled=true>ATRAS</button>
+        </div>
+    </body>
+</html>
