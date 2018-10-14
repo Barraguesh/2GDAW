@@ -1,0 +1,41 @@
+body {
+    height: 100%;
+    background-color: #f9ca8b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: grey;
+}
+
+div {
+    background-color: #eab670;
+    border: 2.5px dashed #bf7f2a;
+    width: 15%;
+    height: 30%;
+    float: left;
+    margin-left: 1.5%;
+    margin-bottom: 1.5%
+}
+
+div h2 {
+    background-color: #bf7f2a;
+    position: relative;
+    top: -10%;
+    margin: 0 auto;
+    width: 80%;
+    text-align: left;
+    font-style: italic;
+    color: lightgrey;
+}
+
+div p {
+    padding: 5px;
+    margin-top: -10%;
+}
+
+div p:first-letter {
+    color: #bf7f2a;
+    font-size: 200%;
+}

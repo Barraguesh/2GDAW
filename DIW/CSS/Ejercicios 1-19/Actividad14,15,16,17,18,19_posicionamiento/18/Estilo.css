@@ -1,0 +1,60 @@
+body {
+    background-color: rosybrown;
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+}
+
+#m1 {
+    margin: 0 auto;
+    background-color: #f4a742;
+    width: 75%;
+    height: 10%;
+    border: 1px solid #aa6e20;
+    text-align: center;
+}
+
+#m2 {
+    background-color: green;
+    border: 1px solid darkgreen;
+    width: 30%;
+    height: 25%;
+    position: absolute;
+    left: 33%;
+    top: 35%;
+    padding: 5px;
+}
+
+#m3, #m4, #m5, #m6 {
+    width: 30%;
+    height: 25%;
+    float: left;
+    margin-left: 5%;
+    padding: 5px;
+}
+
+#m3 {
+    background-color: lightyellow;
+    border: 1px solid yellow;
+    margin-right: 20%;
+}
+
+#m4 {
+    background-color: skyblue;
+    border: 1px solid blue;
+}
+
+#m5 {
+    background-color: violet;
+    border: 1px solid darkviolet;
+    margin-right: 20%;
+}
+
+#m6 {
+    background-color: lightsalmon;
+    border: 1px solid red;
+}
