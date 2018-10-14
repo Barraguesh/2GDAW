@@ -1,0 +1,41 @@
+body {
+    font-family: Arial;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr:first-of-type {
+    background-color: lightgrey;
+}
+
+.euro, .dolar, .libra, .yen {
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.euro {
+    background: #E6F3FF url(imagenes/euro.png) no-repeat;
+}
+
+.dolar {
+    background: #E6F3FF url(imagenes/dolar.png) no-repeat;
+}
+
+.libra {
+    background: #E6F3FF url(imagenes/libra.png) no-repeat;
+}
+
+.yen {
+    background: #E6F3FF url(imagenes/yen.png) no-repeat;
+}
+
+/*Duda, segun W3school el numero indica cada N elementos: https://www.w3schools.com/cssref/sel_nth-of-type.asp*/
+tr:nth-of-type(2), tr:nth-of-type(4) {
+    background-color: #FFFFCC;
+}
+
+tr:not(:first-of-type):hover {
+    background-color: #FFFF66;
+}
