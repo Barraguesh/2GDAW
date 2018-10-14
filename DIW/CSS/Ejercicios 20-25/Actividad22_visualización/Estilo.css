@@ -1,0 +1,39 @@
+/*Parte 1*/
+#caja, #cajaEspecial {
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    float: left;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+#cajaEspecial {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    /*display: none;
+    visibility: hidden;*/
+}
+
+/*Parte 2*/
+#caja:first-of-type {
+    overflow: hidden;
+}
+
+#cajaEspecial {
+    overflow: scroll;
+}
+
+/*Parte 3*/
+#caja {
+    z-index: -1;
+}
+
+#cajaEspecial {
+    z-index: 1;
+    position: relative;
+    left: -40px;
+    top: 10px;
+}
