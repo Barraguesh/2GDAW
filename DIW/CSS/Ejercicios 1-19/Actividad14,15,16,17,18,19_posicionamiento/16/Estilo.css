@@ -1,0 +1,21 @@
+#bricolaje h1 {
+    background-color: olive;
+    text-align: center;
+    padding: 10px;
+}
+
+#jardineria, #electricidad, #fontaneria {
+    margin-top: 60px;
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+
+#texto {
+    width: 75%;
+    margin: auto;
+}
+
+#texto h3 {
+    margin-top: 40%;
+}

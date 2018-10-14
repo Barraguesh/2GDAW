@@ -1,0 +1,23 @@
+h1 {
+    text-align: left;
+    background-color: lightgreen;
+}
+
+#indice {
+    float: left;
+    width: 25%;
+    background-color: lightblue;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-right: 10px;
+}
+
+#carta {
+    float: left;
+    background-color: lightgrey;
+    width: 74%;
+}
+
+#Segundo, #Postre, #Precio {
+    color: lightgrey;
+}

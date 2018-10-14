@@ -1,0 +1,71 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 90%;
+}
+
+#titulo {
+    margin-top: -5px;
+    margin-left: -5px;
+    float: left;
+    background-color: grey;
+    color: white;
+    height: 13%;
+    width: 85%;
+}
+
+#calend {
+    margin-top: -10px;
+    float: left;
+    width: 15%;
+    text-align: center;
+    background-color: lightgrey;
+    height: 100%;
+    color: white;
+}
+
+#calend table {
+    margin: 0 auto;
+}
+
+#calend table caption {
+    text-align: right;
+}
+
+#calend table tbody tr:first-of-type {
+    background-color: white;
+}
+
+#calend a {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
+#diario {
+    width: 83.8%;
+    position: absolute;
+    margin-top: 5.8%;
+    height: 87%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#L187, #L192, #L197, #L216, #L237 {
+    margin-top: 10px;
+    border: 1px solid grey;
+    width: 98%;
+}
+
+#L187 h3, #L192 h3, #L197 h3, #L216 h3, #L237 h3 {
+    color: white;
+    text-align: right;
+    background-color: lightgrey;
+    margin-top: 0px;
+}
+
+#L187 p, #L192 p, #L197 p, #L216 p, #L237 p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
