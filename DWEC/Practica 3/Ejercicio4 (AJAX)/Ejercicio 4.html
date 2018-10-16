@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            function adios() {
+                alert("adios");
+            }
+        </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript">
+        </script>
+        <script>
+            function cargar(id) {
+                $(document).ready(
+                    function () {
+                        $("#capaContenedora").load(id);
+                    }
+                )
+            }
+
+            function cargar2(id) {
+                $(document).ready(
+                    function () {
+                        $.get(id, function (data) {
+                            $("#capaContenedora").html(data);
+                        })
+                    }
+                )
+            }
+
+            function cargar3(nu) {
+                $(document).ready(
+                    $.get(
+                        nu,
+                        function (data) {
+                            $("#capaContenedora").html(data)
+                        }, alert("success")
+                    )
+                    .done(function () {
+                        alert("Second success");
+                    })
+                    .fail(function () {
+                        alert("Fail");
+                    })
+                    .always(function () {
+                        alert("Finished");
+                    })
+                )
+            }
+
+            function cargar4(na) {
+                $(document).ready(
+                    $.ajax({
+                        url: na,
+                        beforeSend: alert("Ahora se cargara una imagen"),
+                        dataType: "html",
+                        success: (e) => $("#capaContenedora").html(e)
+                    })
+                )
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="menu">
+            <a href="#" onclick="cargar('id1.html')" id="id1">Carga primera pagina</a>
+            <a href="#" onclick="cargar('id2')" id="id2">Carga segunda pagina</a>
+            <a href="javascript:cargar2('id3.html')" id="id3">Carga tercera pagina</a>
+            <a href="javascript:cargar4('done.html')" id="id4">Cargar 4 pagina</a>
+        </div>
+        <div id="capaContenedora">
+        </div>
+
+    </body>
+
+</html>
