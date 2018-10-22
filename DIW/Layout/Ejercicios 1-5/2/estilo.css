@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: gray;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background: lightgray;
+    padding: 10px;
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+header {
+    background: white;
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+    flex: 1;
+}
+
+article {
+    background: aqua;
+    padding: 20px;
+    /*width: 70%; hace lo mismo que flex basis*/
+    flex: 1 1 70%;
+}
+
+aside {
+    background: darkblue;
+    padding: 20px;
+    /*width: 30%; hace lo mismo que flex basis*/
+    flex: 1 1 30%;
+    color: white;
+}
+
+@media (max-width: 400px) {
+
+    main {
+        flex-basis: 100%;
+    }
+
+    article,
+    aside {
+        flex-basis: 100%;
+    }
+}
