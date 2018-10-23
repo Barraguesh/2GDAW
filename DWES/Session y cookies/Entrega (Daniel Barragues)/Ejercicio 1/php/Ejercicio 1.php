@@ -33,6 +33,7 @@
                         $_SESSION["login"] = true;
                         $_SESSION["nombreUsuario"] = $usu;
                         header('Location: ./cuenta.php');
+                        die();
                     }
                 }
                 header('Location: ../index.html');
