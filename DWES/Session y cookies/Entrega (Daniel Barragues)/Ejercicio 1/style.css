@@ -1,0 +1,95 @@
+/* 
+    @Author: Daniel Barragues
+    --------------------------------------------------
+    -Todo está ordenado por orden de aparición y peso-
+    -         Orden: Elementos, Clases e IDs.        -
+    --------------------------------------------------
+*/
+
+/* Elementos */
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 80%;
+    color: white;
+    margin-bottom: 3%;
+    text-transform: uppercase;
+    width: 80%;
+}
+
+img {
+    width: 250px;
+    height: 100px;
+    padding: 5%;
+    padding: 0;
+}
+
+form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    border-radius: 5px;
+    width: 100%;
+    font-size: 130%;
+    height: auto;
+    border: 1px solid #82005d;
+    padding: 5px;
+    margin-left: -5px;
+}
+
+/* Clases */
+.boton {
+    width: 50%;
+    margin: 0 auto;
+    height: 30%;
+    margin-bottom: 10%;
+    background-color: #0069d9;
+    padding: 2%;
+    text-align: center;
+    border: none;
+    transition: .20s;
+}
+
+.boton:hover {
+    background-color: #0062cc;
+}
+
+/* IDs */
+#box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid grey;
+    width: 20%;
+    height: 40%;
+    border-radius: 20px;
+    background-color: #82005d;
+}
+
+#usuario {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-bottom: -1px;
+}
+
+#password {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    margin-bottom: 8%;
+}
