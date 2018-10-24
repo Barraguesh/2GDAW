@@ -1,0 +1,70 @@
+/* 
+    @Author: Daniel Barragues
+    --------------------------------------------------
+    -Todo está ordenado por orden de aparición y peso-
+    -         Orden: Elementos, Clases e IDs.        -
+    --------------------------------------------------
+*/
+
+/* Elementos */
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Clases */
+.carrito {
+    position: absolute;
+    width: 4.5%;
+    height: 8%;
+    left: 93%;
+    top: 1.5%;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cerrarPanel {
+    text-align: center;
+
+}
+
+.producto {
+    width: 20%;
+    height: 30%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+    margin-bottom: 2.5%;
+}
+
+.fotoProducto {
+    width: 50%;
+    height: 50%;
+}
+
+.botonCompra {
+    border-radius: 5px;
+    border: 1px solid rgb(209, 137, 3);
+    height: 150%;
+    background-color: orange;
+}
+
+/* IDs */
+#panelCarrito {
+    display: none;
+    margin-bottom: 5%;
+}

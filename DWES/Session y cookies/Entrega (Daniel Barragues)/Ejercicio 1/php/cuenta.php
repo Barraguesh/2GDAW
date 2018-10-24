@@ -4,7 +4,7 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>Cuenta</title>
+        <title>Egibide - Intranet</title>
         <link rel="stylesheet" type="text/css" href="../style.css" />
     </head>
 
