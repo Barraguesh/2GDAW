@@ -9,12 +9,15 @@
 /* Elementos */
 body {
     margin: 0;
-    height: 100%;
-    width: 100%;
     background-color: rgb(233, 233, 233);
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    margin-bottom: 5%;
 }
 
 /* Clases */
@@ -26,28 +29,38 @@ body {
     top: 1.5%;
 }
 
+.panelCarrito {
+    height: 0px;
+    overflow: hidden;
+    margin-bottom: 5%;
+    transition: .5s;
+}
+
+.mostrarPanel {
+    height: 300px;
+}
+
+.btnCerrarPanel {
+    text-align: center;
+
+}
+
 .contenedor {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-
-.cerrarPanel {
-    text-align: center;
-
+    height: 500px;
 }
 
 .producto {
     width: 20%;
-    height: 30%;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: white;
-
     margin-bottom: 2.5%;
 }
 
@@ -64,7 +77,3 @@ body {
 }
 
 /* IDs */
-#panelCarrito {
-    display: none;
-    margin-bottom: 5%;
-}
