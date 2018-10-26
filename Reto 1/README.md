@@ -8,10 +8,10 @@
 [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg?longCache=true&style=flat)](/LICENSE)
 
 ## Capturas de pantalla
-![alt](./Documentaci%C3%B3n/media/Captura1.png)
+![alt](./Documentaci%C3%B3n/media/Captura1.PNG)
 <h6 align="center">Página principal</h6>  
 
-![alt](./Documentaci%C3%B3n/media/Captura2.png)
+![alt](./Documentaci%C3%B3n/media/Captura2.PNG)
 <h6 align="center">Página de módo automático</h6>  
 
 ## ¿Para qué sirve?
