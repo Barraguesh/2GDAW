@@ -3,7 +3,7 @@
   <br/>
   Software Beasts - Reto 1
 </h1>
-<h5 align="center">Página web para la gestion de un autómata empleado en una empresa que comercializa latas de conservas</h5>
+<h5 align="center">Página web desplegada en un servidor web Siemens para la gestion de un autómata empleado en una "empresa" que comercializa latas de conservas</h5>
 
 [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg?longCache=true&style=flat)](/LICENSE)
 
