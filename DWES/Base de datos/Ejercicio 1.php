@@ -31,8 +31,8 @@
             }
             ?>
         <form action="Ejercicio 1.php" method="post">
-            <input type="text">
-            <input type="submit" name="DNI" value="Consulta el DNI">
+            <input type="text" name="DNI">
+            <input type="submit" value="Consulta el DNI">
         </form>
         <?php
             if (isset($_POST['DNI'])) {
