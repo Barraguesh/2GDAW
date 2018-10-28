@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
 }
@@ -6,13 +7,19 @@ html, body {
 html {
     box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
 body {
     background-color: lightgray;
-    font-family:sans-serif;
+    font-family: sans-serif;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 ul.principal {
@@ -22,10 +29,16 @@ ul.principal {
     padding: 10px;
     background: gray;
     list-style: none;
+    display: flex;
+    justify-content: space-around;
 }
 
 .menu {
     height: 32px;
+    display: flex;
+    align-items: center;
+    flex: 3;
+    justify-content: center;
 }
 
 .menu a {
@@ -37,13 +50,30 @@ ul.principal {
 }
 
 .social {
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
 }
 
 @media (max-width: 768px) {
+    .principal {
+        flex-wrap: wrap;
+        margin: 20px;
+    }
+
+    .menu {
+        flex-basis: 33%;
+    }
+
+    .social {
+        margin-top: 20px;
+    }
 
 }
 
 @media (max-width: 340px) {
-
+    .menu {
+        flex-basis: 100%;
+    }
 }

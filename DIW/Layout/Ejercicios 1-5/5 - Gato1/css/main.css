@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
 }
@@ -6,25 +7,35 @@ html, body {
 html {
     box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
 body {
     background-color: lightgray;
-    font-family:sans-serif;
+    font-family: sans-serif;
     /*Añade aquí las propiedades Flexbox*/
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 /* Contenedor */
 main {
     width: 800px;
     /*Añade aquí las propiedades Flexbox*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     min-height: 100vh;
 }
 
-main > * {
-  /*Añade aquí las propiedades Flexbox*/
+main>* {
+    /*Añade aquí las propiedades Flexbox*/
+    order: 9;
 }
 
 /* Navegación */
@@ -35,11 +46,17 @@ ul.principal {
     background: gray;
     list-style: none;
     /*Añade aquí las propiedades Flexbox*/
+    display: flex;
+    justify-content: space-around;
 }
 
 .menu {
     height: 32px;
     /*Añade aquí las propiedades Flexbox*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 3;
 }
 
 .menu a {
@@ -51,12 +68,19 @@ ul.principal {
 }
 
 .social {
-  /*Añade aquí las propiedades Flexbox*/
+    /*Añade aquí las propiedades Flexbox*/
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
 }
 
 #movil {
     background-color: gray;
     /*Añade aquí las propiedades Flexbox*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
     padding: 10px;
     display: none;
@@ -100,11 +124,15 @@ ul.principal {
 }
 
 #subscribe form {
-  /*Añade aquí las propiedades Flexbox*/
+    /*Añade aquí las propiedades Flexbox*/
+    display: flex;
+    justify-content: center;
 }
 
-#subscribe form > * {
-  /*Añade aquí las propiedades Flexbox*/
+#subscribe form>* {
+    /*Añade aquí las propiedades Flexbox*/
+    flex: 1;
+    margin: 0 10px;
 }
 
 /* Footer */
@@ -120,9 +148,58 @@ footer {
 
 /* Puntos de ruptura */
 @media (max-width: 768px) {
-  /*Añade aquí las propiedades Flexbox*/
+
+    /*Añade aquí las propiedades Flexbox*/
+    main {
+        margin: 10px;
+    }
+
+    .principal {
+        flex-wrap: wrap;
+        display: none;
+        order: 2;
+    }
+
+    .menu {
+        flex-basis: 33%;
+    }
+
+    li:nth-child(4) {
+        flex-basis: 50%;
+    }
+
+    li:nth-child(5) {
+        flex-basis: 50%;
+    }
+
+    .social {
+        margin-top: 20px;
+    }
+
+    #subscribe {
+        order: 3;
+        margin-top: 20px;
+    }
+
+    #subscribe form {
+        flex-wrap: wrap;
+    }
+
+    #subscribe form>* {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
+
+    #movil {
+        display: flex;
+        order: 1;
+    }
 }
 
 @media (max-width: 340px) {
-  /*Añade aquí las propiedades Flexbox*/
+
+    /*Añade aquí las propiedades Flexbox*/
+    .menu {
+        flex-basis: 100%;
+    }
 }
