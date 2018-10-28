@@ -1,4 +1,56 @@
-
 /**
 	* CSS Flexible Layout Module - Caja Flexible -
 */
+#viajes {
+	display: flex;
+	justify-content: space-around;
+}
+
+.viajes-item {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.uno {
+	background-color: aquamarine;
+}
+
+.dos {
+	background-color: green;
+}
+
+.tres {
+	background-color: grey;
+}
+
+.viajes-item img {
+	order: -1;
+}
+
+.viajes-item h2,
+.viajes-item p {
+	order: 0;
+}
+
+.viajes-item button {
+	align-self: center;
+	padding: 5px 40px;
+}
+
+@media (max-width: 500px) {
+	#cabecera {
+		display: none;
+	}
+
+	#viajes {
+		flex-direction: column;
+	}
+
+	.viajes-item button {
+		width: 40px;
+		padding: 0;
+		/*No consigo poner el ancho como se pide en el documento*/
+	}
+}
