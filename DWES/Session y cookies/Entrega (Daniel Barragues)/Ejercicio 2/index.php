@@ -48,7 +48,7 @@
 
     <body>
         <h1>Amazonias Shopping</h1>
-        <img class="carrito" onclick="panelCarrito(true);" src="media/carrito.png">
+        <img class="carrito" onclick="panelCarrito(true)" src="media/carrito.png">
         <div class="panelCarrito" id="panelCarrito">
             <p id="relleno">No hay nada en tu carrito</p>
             <?php
@@ -58,13 +58,18 @@
                     $_SESSION["carritoCompraSession"] = $carritoCompra;
                     $total = 0;
                     foreach ($carritoCompra as $key => $value) {
-                        $productos = $_SESSION["productos"];
-                        $producto = $productos[$key];
-                        echo "<p><strong>", $producto["nombre"],"</strong>, ", $value, " unidades. Total: ", $carritoCompra[$key] * $producto["precio"],"</p>";
+                        if ($value > 0) {
+                            $productos = $_SESSION["productos"];
+                            $producto = $productos[$key];
+                            echo "<p><strong>", $producto["nombre"],"</strong>, <span id='unidadesProducto'>", $value, "</span> unidades. Total: ", $carritoCompra[$key] * $producto["precio"],"€</p>";
+                            $total = $total + $carritoCompra[$key] * $producto["precio"];
+                        }
                     }
+                    echo "<br/>Total: ", $total,"€";
                 }
             ?>
-            <button class="btnCerrarPanel" onclick="panelCarrito();">Cerrar carro</button>
+            <br /><br />
+            <button class="btnCerrarPanel" onclick="panelCarrito(false);">Cerrar carro</button>
         </div>
         <div class="contenedor">
             <?php
@@ -76,7 +81,7 @@
                     echo "<img class='fotoProducto' src='media/", $key, ".jpg'><br/>";
                     echo "<p>", $value["descripcion"], "</p>";
                     echo "<form action='index.php' method='POST'>
-                            <button class='botonCompra' onclick='quitarRelleno();' name='submit' type='submit' value='", $key, "'>Añadir al carrito</button>
+                            <button class='botonCompra' onclick='panelCarrito(null,null,true)' name='submit' type='submit' value='", $key, "'>Añadir al carrito</button>
                         </form>";
                     echo "</div>";
                     $i++;
@@ -86,7 +91,7 @@
     </body>
     <script>
         window.onload = function mantenerCarrito() {
-            panelCarrito();
+            panelCarrito(false, true);
         }
     </script>
 
