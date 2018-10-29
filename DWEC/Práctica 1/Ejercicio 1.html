@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejercicio 1</title>
+        <script>
+            var x = 0;
+            var y = 0;
+            var usuarioCorrecto = false;
+            var contrasenaCorrecto = false;
+            var diccionario = [
+                    ["admin", "admin"],
+                    ["Pedro", "12345Abcde"]
+                ];
+        
+                function validarForm() {
+                    var usuario = document.getElementById("usuario").value;
+                    var contrasena = document.getElementById("contrasena").value;
+                    diccionario.forEach(element => {
+                        if (usuario == element[x,y]) {
+                            usuarioCorrecto = true;
+                            if (contrasena == element[x,y]) {
+                                contrasenaCorrecto = true;
+                            }
+                        }
+                        x++;
+                        y = 0;
+                    });
+                    if (usuarioCorrecto == false) {
+                        alert("Usuario incorrecto");
+                    }
+                    if (contrasenaCorrecto == false) {
+                        alert("Contraseña incorrecta");
+                    }
+                }
+        </script>
+    </head>
+
+    <body>
+        <form name="formulario" onsubmit="return validarForm()">
+            <input type="text" id="usuario">
+            <input type="password" id="contrasena">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+
+</html>
