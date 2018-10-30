@@ -75,8 +75,8 @@
             ?>
             <br /><br />
             <button class="btnCerrarPanel" onclick="panelCarrito(false)">Cerrar carro</button>
-            <form action="index.php" method="post">
-                <button class="btnTramitarPedido" type="submit" name="tramitarPedido" onclick="tramitarPedido()">Tramitar pedido</button>
+            <form action="index.php" method="post" onsubmit="return tramitarPed()">
+                <button class="btnTramitarPedido" type="submit" name="tramitarPedido">Tramitar pedido</button>
             </form>
             <?php
                 if (isset($_POST["tramitarPedido"])) {
