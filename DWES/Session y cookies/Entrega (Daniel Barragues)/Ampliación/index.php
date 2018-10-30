@@ -36,6 +36,9 @@
             "amazfitStratos"=>0,
             "bip"=>0];
     }
+    if (!isset($_SESSION["favoritos"])) {
+        $_SESSION["favoritos"] = [];
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -81,6 +84,24 @@
                 }
             ?>
         </div>
+        <div class="favoritos">
+            <?php
+                /* Añade a favoritos si no existe ese mismo producto en favoritos */
+                if (isset($_POST["favorito"])) {
+                    $contador = 0;
+                    foreach ($_SESSION["favoritos"] as $key) {
+                        if($_POST["favorito"] == $key) {
+                            $contador++;
+                        }
+                    }
+                    if ($contador < 1) {
+                        array_push($_SESSION["favoritos"], $_POST["favorito"]); 
+                        echo "Añadido a favoritos<br/>";
+                        echo "En favoritos esta: ", print_r($_SESSION["favoritos"]);
+                    }
+                }
+            ?>
+        </div>
         <div class="contenedor">
             <?php
                 /* Imprime todos los productos guardados en el array productos de sesion */
@@ -94,6 +115,9 @@
                     echo "<form action='index.php' method='POST'>
                             <button class='botonCompra' onclick='panelCarrito(null,null,true)' name='submit' type='submit' value='", $key, "'>Añadir al carrito</button>
                         </form>";
+                        echo "<form action='index.php' method='POST'>
+                                <button class='botonFavoritos' name='favorito' type='submit' value='", $key, "'>Añadir a favoritos</button>
+                            </form>";
                     echo "</div>";
                     $i++;
                 }

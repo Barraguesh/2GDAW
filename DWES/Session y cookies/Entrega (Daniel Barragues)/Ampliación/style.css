@@ -80,4 +80,12 @@ h1 {
     background-color: orange;
 }
 
+.botonFavoritos {
+    margin-top: 20%;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    height: 50%;
+    background-color: grey;
+}
+
 /* IDs */
