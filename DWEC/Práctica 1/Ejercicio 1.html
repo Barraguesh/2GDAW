@@ -6,7 +6,6 @@
         <title>Ejercicio 1</title>
         <script>
             var x = 0;
-            var y = 0;
             var usuarioCorrecto = false;
             var contrasenaCorrecto = false;
             var diccionario = [
@@ -18,9 +17,9 @@
                     var usuario = document.getElementById("usuario").value;
                     var contrasena = document.getElementById("contrasena").value;
                     diccionario.forEach(element => {
-                        if (usuario == element[x,y]) {
+                        if (usuario == element[x,0]) {
                             usuarioCorrecto = true;
-                            if (contrasena == element[x,y+1]) {
+                            if (contrasena == element[x,1]) {
                                 contrasenaCorrecto = true;
                             }
                         }
