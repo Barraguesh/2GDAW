@@ -36,9 +36,6 @@
             "amazfitStratos"=>0,
             "bip"=>0];
     }
-    if (!isset($_SESSION["favoritos"])) {
-        $_SESSION["favoritos"] = [];
-    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -88,16 +85,36 @@
             <?php
                 /* Añade a favoritos si no existe ese mismo producto en favoritos */
                 if (isset($_POST["favorito"])) {
-                    $contador = 0;
-                    foreach ($_SESSION["favoritos"] as $key) {
-                        if($_POST["favorito"] == $key) {
-                            $contador++;
+                    $favorito = $_POST["favorito"];
+                    $productos = $_SESSION["productos"];
+                    if (isset($_COOKIE["favoritos"]) && $_COOKIE["favoritos"] != $favorito) {
+                        $contador = 0;
+                        $favArray = explode(",", $_COOKIE["favoritos"]);
+                        foreach ($favArray as $key) {
+                            if ($favorito == $key) {
+                                $contador++;
+                            }
                         }
-                    }
-                    if ($contador < 1) {
-                        array_push($_SESSION["favoritos"], $_POST["favorito"]); 
-                        echo "Añadido a favoritos<br/>";
-                        echo "En favoritos esta: ", print_r($_SESSION["favoritos"]);
+                        if ($contador < 1) {
+                            array_push($favArray, $favorito);
+                            $favorito = implode(",", $favArray);
+                            setcookie("favoritos", $favorito, time() + 3600);
+                            echo "<p>Añadido a favoritos</p>";
+                        } else {
+                            echo "<p>Ya esta en favoritos<p>";
+                        }
+                        echo "<h2>Favoritos</h2><br/>
+                        <p>", $productos[$favorito]["nombre"],"</p>";
+                        foreach ($favArray as $value) {
+                            if ($value != $favorito) {
+                                echo "<p>", $productos[$value]["nombre"], "</p>";
+                            }
+                        }
+                    } else {
+                        setcookie("favoritos", $favorito, time() + 3600);
+                        echo "<p>Añadido a favoritos</p>
+                              <h2>Favoritos</h2><br/>
+                              <p>", $productos[$favorito]["nombre"],"</p>";
                     }
                 }
             ?>
@@ -115,7 +132,7 @@
                     echo "<form action='index.php' method='POST'>
                             <button class='botonCompra' onclick='panelCarrito(null,null,true)' name='submit' type='submit' value='", $key, "'>Añadir al carrito</button>
                         </form>";
-                        echo "<form action='index.php' method='POST'>
+                    echo "<form action='index.php' method='POST'>
                                 <button class='botonFavoritos' name='favorito' type='submit' value='", $key, "'>Añadir a favoritos</button>
                             </form>";
                     echo "</div>";

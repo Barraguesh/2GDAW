@@ -42,7 +42,13 @@ h1 {
 
 .btnCerrarPanel {
     text-align: center;
+}
 
+.favoritos {
+    position: absolute;
+    left: 0;
+    top: 5%;
+    border: 1px solid black;
 }
 
 .contenedor {
