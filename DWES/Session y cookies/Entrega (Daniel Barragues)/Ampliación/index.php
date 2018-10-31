@@ -82,6 +82,7 @@
             ?>
         </div>
         <div class="favoritos">
+            <h2>Favoritos</h2>
             <?php
                 /* Añade a favoritos si no existe ese mismo producto en favoritos */
                 if (isset($_POST["favorito"])) {
@@ -99,22 +100,15 @@
                             array_push($favArray, $favorito);
                             $favorito = implode(",", $favArray);
                             setcookie("favoritos", $favorito, time() + 3600);
-                            echo "<p>Añadido a favoritos</p>";
                         } else {
-                            echo "<p>Ya esta en favoritos<p>";
+                            echo "<p><i>Ya esta en favoritos</i><p>";
                         }
-                        echo "<h2>Favoritos</h2><br/>
-                        <p>", $productos[$favorito]["nombre"],"</p>";
                         foreach ($favArray as $value) {
-                            if ($value != $favorito) {
-                                echo "<p>", $productos[$value]["nombre"], "</p>";
-                            }
+                            echo "<p>", $productos[$value]["nombre"], "</p>";
                         }
                     } else {
                         setcookie("favoritos", $favorito, time() + 3600);
-                        echo "<p>Añadido a favoritos</p>
-                              <h2>Favoritos</h2><br/>
-                              <p>", $productos[$favorito]["nombre"],"</p>";
+                        echo "<p>", $productos[$favorito]["nombre"],"</p>";
                     }
                 }
             ?>
