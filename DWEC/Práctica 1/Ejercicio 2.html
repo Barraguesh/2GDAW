@@ -6,20 +6,32 @@
         <title>Ejercicio 2</title>
         <script>
             var notas = [];
-            function consultaGuarda() {
+            function guardarNota() {
                 var fecha = document.getElementById("fecha").value;
-                notas.push([fecha, "test"]);
-                alert(notas[0][1]);
+                var nota = document.getElementById("nota").value;
+                localStorage.setItem(fecha, nota);
+            }
+            function consultarNota() {
+                var fecha = document.getElementById("fecha").value;
+                if (fecha != "") {
+                    var nota = localStorage.getItem(fecha);
+                    if (nota != null) {
+                        alert(nota);
+                    }
+                } else {
+                    alert("Introduzca una fecha para consultar notas");
+                }
             }
         </script>
     </head>
 
     <body>
-        <form onsubmit="consultaGuarda()">
+        <form onsubmit="guardarNota()">
             <input type="date" id="fecha">
-            <input type="text">
-            <input type="submit" value="Guardar/Consultar">
+            <input type="text" id="nota"><br />
+            <input type="submit" value="Guardar">
         </form>
+        <button onclick="consultarNota()">Consultar</button>
     </body>
 
 </html>
