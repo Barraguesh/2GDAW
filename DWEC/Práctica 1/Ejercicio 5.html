@@ -3,18 +3,68 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>Ejercicio 5</title>
+        <title>Ejercicio 3</title>
         <script>
+            var nombreRGEX = /[A-Z][a-z]*/;
+            var apellidosRGEX = /[A-Z]\w* [A-Za-z]*/;
+            var emailRGEX = /[A-z]\w*@[a-z]*.com/;
+            var poblaProviRGEX = /[A-Z]{1}[a-z]*/;
             function validarForm() {
-
+                if (nombreRGEX.test(document.getElementById("nombre").value) == false) {
+                    alert("Introduzca un nombre válido");
+                }
+                if (apellidosRGEX.test(document.getElementById("apellidos").value) == false) {
+                    alert("Introduzca apellidos válidos");
+                }
+                if (emailRGEX.test(document.getElementById("email").value) == false){
+                    alert("Introduzca un email válido");
+                }
+                if (poblaProviRGEX.test(document.getElementById("poblacion").value) == false) {
+                    alert("Introduzca una población válida");
+                }
+                if (poblaProviRGEX.test(document.getElementById("provincia").value) == false) {
+                    alert("Introduzca una provincia válida");
+                }
+            }
+            function borrarForm() {
+                
             }
         </script>
     </head>
 
     <body>
         <form onsubmit="return validarForm()">
-            
+            <input type="text" id="nombre" placeholder="Nombre">
+            <br />
+            <input type="text" id="apellidos" placeholder="Apellidos">
+            <br />
+            <input type="text" id="email" placeholder="Correo electronico">
+            <br />
+            <input type="text" id="poblacion" placeholder="Poblacion">
+            <br />
+            <input type="text" id="provincia" placeholder="Provincia">
+            <br />
+            Edad
+            <br/>
+            <input type="radio" value="0-20" name="edad">0-20
+            <br/>
+            <input type="radio" value="21-40" name="edad">21-40
+            <br/>
+            <input type="radio" value="41-60" name="edad">41-60
+            <br/>
+            <input type="radio" value="60+" name="edad">60+
+            <br/>
+            ¿Como nos ha conocido?
+            <br/>
+            <input type="checkbox" value="amigos" name="comoConocer"> A traves de amiguitos.
+            <br/>
+            <input type="checkbox" value="internet" name="comoConocer"> A traves de internete.
+            <br/>
+            <input type="checkbox" value="otros" name="comoConocer"> A traves de otras cosas.
+            <br/>
+            <input type="submit" value="Enviar">
         </form>
+        <button onclick="borrarForm()">Borrar datos</button>
     </body>
 
 </html>

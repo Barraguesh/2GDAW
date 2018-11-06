@@ -28,12 +28,16 @@
     <body>
         <form onsubmit="return validarForm()">
             <input type="text" id="nombre" placeholder="Nombre">
+            <br/>
             <input type="text" id="direccion" placeholder="Direccion">
+            <br/>
             <input type="text" id="telefono" placeholder="Telefono">
-            <input type="text" placeholder="Comentarios">
+            <br/>
+            <textarea rows="4" cols="50"></textarea>
+            <br/>
             <input type="submit" value="Enviar">
+            <button onclick="borrarForm()">Borrar datos</button>
         </form>
-        <button onclick="borrarForm()"></button>
     </body>
 
 </html>
