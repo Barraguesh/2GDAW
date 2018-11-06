@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejercicio 3</title>
+        <script>
+            var nombreRGEX = /[A-Z][a-z]*/;
+            var direccionRGEX = /[A-Z]\w* [A-Za-z]\w* [A-Za-z]\w*/;
+            var movilRGEX = /[6-7][0-9]{8}/;
+            function validarForm() {
+                if (nombreRGEX.test(document.getElementById("nombre").value) == false) {
+                    alert("Introduzca un nombre válido");
+                }
+                if (direccionRGEX.test(document.getElementById("direccion").value) == false) {
+                    alert("Introduzca una dirección válida");
+                }
+                if (movilRGEX.test(document.getElementById("telefono").value) == false){
+                    alert("Introduzca un móvil válido");
+                }
+            }
+            function borrarForm() {
+                
+            }
+        </script>
+    </head>
+
+    <body>
+        <form onsubmit="return validarForm()">
+            <input type="text" id="nombre" placeholder="Nombre">
+            <input type="text" id="direccion" placeholder="Direccion">
+            <input type="text" id="telefono" placeholder="Telefono">
+            <input type="text" placeholder="Comentarios">
+            <input type="submit" value="Enviar">
+        </form>
+        <button onclick="borrarForm()"></button>
+    </body>
+
+</html>

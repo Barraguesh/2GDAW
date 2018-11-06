@@ -16,7 +16,7 @@
                 if (fecha != "") {
                     var nota = localStorage.getItem(fecha);
                     if (nota != null) {
-                        alert(nota);
+                        document.getElementById("textoNota").innerHTML = "<h4>Nota:</h4><p>nota</p>";
                     }
                 } else {
                     alert("Introduzca una fecha para consultar notas");
@@ -32,6 +32,7 @@
             <input type="submit" value="Guardar">
         </form>
         <button onclick="consultarNota()">Consultar</button>
+        <div id="textoNota"></div>
     </body>
 
 </html>
