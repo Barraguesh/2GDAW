@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejercicio 4</title>
+        <script>
+            function marcarTodas() {
+                var cajas = document.getElementsByName("caja");
+                for (let index = 0; index < cajas.length; index++) {
+                    cajas[index].checked = true;
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <form onsubmit="return validarForm()">
+            Marcar todas <input type="checkbox" id="cajaTodas" onclick="marcarTodas()">
+            <br />
+            <input type="checkbox" name="caja">
+            <input type="checkbox" name="caja">
+            <input type="checkbox" name="caja">
+            <input type="checkbox" name="caja">
+            <input type="checkbox" name="caja">
+            <input type="checkbox" name="caja">
+            <input type="checkbox" name="caja">
+            <input type="checkbox" name="caja">
+            <br />
+            <input type="submit" value="Enviar">
+        </form>
+    </body>
+
+</html>
