@@ -27,7 +27,13 @@
                 }
             }
             function borrarForm() {
-                
+                [].forEach.call(document.getElementsByTagName("input"), function(element) {
+                    if (element.type == "text" ) {
+                        element.value="";
+                    } else {
+                        element.checked = false;
+                    }
+                });
             }
         </script>
     </head>
@@ -45,23 +51,23 @@
             <input type="text" id="provincia" placeholder="Provincia">
             <br />
             Edad
-            <br/>
+            <br />
             <input type="radio" value="0-20" name="edad">0-20
-            <br/>
+            <br />
             <input type="radio" value="21-40" name="edad">21-40
-            <br/>
+            <br />
             <input type="radio" value="41-60" name="edad">41-60
-            <br/>
+            <br />
             <input type="radio" value="60+" name="edad">60+
-            <br/>
+            <br />
             ¿Como nos ha conocido?
-            <br/>
+            <br />
             <input type="checkbox" value="amigos" name="comoConocer"> A traves de amiguitos.
-            <br/>
+            <br />
             <input type="checkbox" value="internet" name="comoConocer"> A traves de internete.
-            <br/>
+            <br />
             <input type="checkbox" value="otros" name="comoConocer"> A traves de otras cosas.
-            <br/>
+            <br />
             <input type="submit" value="Enviar">
         </form>
         <button onclick="borrarForm()">Borrar datos</button>

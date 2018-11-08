@@ -20,21 +20,25 @@
                 }
             }
             function borrarForm() {
-                
-            }
+                [].forEach.call(document.getElementsByTagName("input"), function(element) {
+                    if (element.type == "text") {
+                        element.value="";
+                    }
+                });
+            }   
         </script>
     </head>
 
     <body>
         <form onsubmit="return validarForm()">
             <input type="text" id="nombre" placeholder="Nombre">
-            <br/>
+            <br />
             <input type="text" id="direccion" placeholder="Direccion">
-            <br/>
+            <br />
             <input type="text" id="telefono" placeholder="Telefono">
-            <br/>
+            <br />
             <textarea rows="4" cols="50"></textarea>
-            <br/>
+            <br />
             <input type="submit" value="Enviar">
             <button onclick="borrarForm()">Borrar datos</button>
         </form>
