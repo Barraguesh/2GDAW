@@ -1,0 +1,758 @@
+/* 
+    @Author: MAD Project
+    -------------------------------------------
+    -Todo está ordenado por orden de aparición-
+    -------------------------------------------
+*/
+
+/* Core Theme Colors */
+:root {
+    /* Fondo de la página. Default: #f3f3f3 */
+    --generalbg: #f3f3f3;
+    /* Fondo header de la página */
+    --header: #10a066;
+    /* Elementos de la zona main. Default: #edeec9 */
+    --elementosmain: #edeec9;
+    /* Elementos en la barra lateral. Default: #6c756b */
+    --fondosidebar: #6c756b;
+    /* Botones elementos main. Defaul: #98c9a3 */
+    --elementosbtn: #98c9a3;
+    /* Boton activado de elementos del main. Defaul: #bfd8bd */
+    --elementosbtnactivado: #bfd8bd;
+    /* Botones barra lateral. Default: #dd6e42 */
+    --sidebarbtn: #dd6e42;
+    /* Fondo de las cajas input. Default: #c3baba */
+    --input: #c3baba;
+}
+
+*:focus {
+    outline: none;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', Verdana, sans-serif;
+}
+
+.link {
+    display: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header'
+        'main main sidebar'
+        'main main footer';
+    grid-gap: 10px;
+    grid-template-columns: 60% 20%;
+    grid-template-rows: 11% 79% auto;
+    background-color: var(--generalbg);
+}
+
+.header {
+    grid-area: header;
+    background-color: var(--header);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    height: 70px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.logoImg {
+    width: 100%;
+    height: 100%;
+}
+
+#buscador {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.search {
+    border-radius: 40px;
+    margin-right: 60px;
+    padding: 6px;
+    font-size: 110%;
+    border: none;
+}
+
+.etiqueta,
+.etiquetaTema {
+    margin-right: 1em;
+    border: 1px solid grey;
+    background-color: var(--elementosmain);
+    border-radius: 5px;
+    color: black;
+    padding: 0.5em;
+}
+
+.main {
+    grid-area: main;
+    padding-top: 1%;
+    /* Ocultar barra scroll en todos los navegadores */
+    overflow: auto;
+    max-height: 97%;
+    margin-right: -100px;
+    padding-right: 100px;
+}
+
+.hide-scroll {
+    overflow: hidden;
+    width: 137%;
+    height: 110%;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botonTema {
+    background-color: #e8e8e8;
+    border-radius: 5px;
+    padding: 10px;
+    width: 95%;
+    margin-bottom: 2%;
+}
+
+/* Subpágina de Temas y respuestas */
+.temaBox,
+.respBox,
+.responderBox,
+.crearTema {
+    display: flex;
+    background-color: var(--elementosmain);
+    border-radius: 5px;
+    padding: 10px;
+    width: 94%;
+    margin-bottom: 2%;
+}
+
+.etiquetaTema {
+    margin-left: 1%;
+    padding: 1px;
+    font-size: 80%;
+    font-weight: normal;
+    background-color: var(--elementosbtn);
+}
+
+/* Colores etiquetas */
+#Duda {
+    background-color: #df6738;
+}
+
+#Problema {
+    background-color: #ec3f41;
+}
+
+#Urgente {
+    background-color: orangered;
+}
+
+#Solucionado {
+    background-color: #3a7d34;
+}
+
+/* FIN Colores etiquetas */
+
+.respBox,
+.responderBox {
+    width: 65%;
+}
+
+.responderBox {
+    margin-left: 16.6%;
+}
+
+.temaBox div:nth-child(1),
+.respBox div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 1.7%;
+}
+
+.temaBox div:nth-child(2),
+.respBox div:nth-child(2) {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-right: 10px;
+    width: 90%;
+}
+
+.respBox div:nth-child(2) {
+    justify-content: space-between;
+}
+
+.temaBox div:nth-child(2) h2 {
+    margin-right: auto;
+    width: 90%;
+}
+
+.temaBox div:nth-child(2) h4,
+.respBox div:nth-child(2) h4 {
+    word-break: break-all;
+    flex: 100%;
+    margin-top: -1%;
+    margin-left: .3%;
+}
+
+.respBox div:nth-child(2) h4 {
+    margin-top: 0;
+}
+
+.temaBox div:nth-child(2):hover,
+.respBox:nth-child(2):hover,
+.votarBTN:hover,
+.responderBTN:hover,
+.logout a:hover,
+.crearTemaBTN:hover,
+.fichero:hover,
+.login a:hover,
+.registro a:hover,
+#btnCargarMas:hover,
+#elegirRespuesta:hover {
+    cursor: pointer;
+}
+
+.temaBox a,
+.respBox a {
+    color: #dd6e42;
+    text-decoration: none;
+}
+
+.votos {
+    border-radius: 2px;
+    margin-bottom: 5px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.votarBTN,
+.responderBTN,
+.crearTemaBTN {
+    border-radius: 5px;
+    border: none;
+    background-color: var(--elementosbtn);
+    height: 20px;
+    width: 100%;
+    transition: .20s;
+}
+
+.votarBTN:active,
+.responderBTN:active,
+.crearTemaBTN:active {
+    background-color: var(--elementosbtnactivado);
+}
+
+#mensajeEnviadoRespuesta {
+    border: 1px solid green;
+    background-color: lightgreen;
+    width: 25%;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 1%;
+    font-size: 110%;
+}
+
+.formResponder {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.respuestaArea {
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 5px;
+    font-family: 'Roboto', Verdana, sans-serif;
+    width: 98.5%;
+    resize: none;
+}
+
+.responderBTN,
+.crearTemaBTN {
+    width: 30%;
+    margin-top: 1.5%;
+    font-size: 110%;
+    padding: .5%;
+    height: auto;
+}
+
+.seleccionada {
+    border: 2px dashed var(--sidebarbtn);
+}
+
+/* FIN subpágina de Temas y respuestas */
+
+/* Subpágina crear tema */
+.crearTema {
+    flex-direction: column;
+    margin-left: 5%;
+    width: 86%;
+    padding: 1.5%;
+}
+
+.tituloTema {
+    font-size: 130%;
+}
+
+.crearTema input {
+    width: 40%;
+    margin-bottom: 2.5%;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 2.5px;
+}
+
+.fichero {
+    padding: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+.crearTema textarea {
+    padding: 5px;
+    font-family: 'Roboto', Verdana, sans-serif;
+    resize: none;
+    margin-bottom: 2.5%;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.crearTemaBTN {
+    align-self: center;
+}
+
+/* FIN subpágina crear tema */
+
+/* Barra lateral */
+.sidebar {
+    grid-area: sidebar;
+}
+
+.login,
+.registro,
+.logout,
+.topTemas {
+    flex-direction: column;
+    width: 97%;
+    background-color: var(--fondosidebar);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4%;
+}
+
+.login h3,
+.logout h3 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.logout h3 {
+    font-size: 20px;
+}
+
+.inp {
+    background-color: var(--input);
+    width: 95%;
+    height: 40px;
+    border: solid 2px darkgrey;
+    font-size: 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 250ms ease;
+    margin-left: 1%;
+}
+
+.inp:first-of-type {
+    margin-bottom: -2px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.inp:nth-of-type(2) {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    margin-bottom: 20px;
+}
+
+.registro {
+    padding-top: 10%;
+    color: white;
+}
+
+/* Comprobador de contraseñas */
+#pswd_info {
+    position: absolute;
+    width: 250px;
+    padding: 15px;
+    background: #fefefe;
+    font-size: .875em;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px #ccc;
+    border: 1px solid #ddd;
+    top: 43%;
+    left: 62%;
+}
+
+#pswd_info h4 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+.invalid {
+    padding-left: 22px;
+    line-height: 24px;
+    color: #ec3f41;
+}
+
+.valid {
+    padding-left: 22px;
+    line-height: 24px;
+    color: #3a7d34;
+}
+
+#pswd_info {
+    display: none;
+}
+
+/* FIN Comprobador de contraseñas */
+
+.inputRegistro {
+    background-color: var(--input);
+    width: 75%;
+    height: 40px;
+    border: solid 2px darkgrey;
+    font-size: 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 250ms ease;
+    margin-bottom: 10px;
+}
+
+#password {
+    margin-bottom: 30px;
+}
+
+.loginBTN,
+.logoutBTN,
+.registroBTN,
+#btnCargarMas,
+#elegirRespuesta {
+    border-radius: 5px;
+    border: none;
+    background-color: var(--sidebarbtn);
+    height: 40px;
+    margin-left: 1.6%;
+    width: 96.5%;
+    transition: .20s;
+    font-size: 20px;
+}
+
+#elegirRespuesta {
+    margin-left: 0;
+    width: 20%;
+    font-size: 100%;
+    height: auto;
+}
+
+#btnCargarMas {
+    margin-bottom: 2em;
+    width: 20%;
+}
+
+.registroBTN {
+    width: 50%;
+}
+
+.loginBTN:hover {
+    background-color: #df6738;
+}
+
+.logout a {
+    border-radius: 5px;
+    text-align: center;
+    background-color: grey;
+    text-decoration: none;
+    color: white;
+    width: 60%;
+    padding: 5%;
+    margin-bottom: 10%;
+    border: 1px solid lightgrey;
+    font-size: 20px;
+}
+
+.logout a:hover {
+    background-color: darkgrey;
+}
+
+.logoutBTN {
+    font-size: 100%;
+    margin-bottom: 20%;
+}
+
+.login a,
+.registro a {
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+    margin-bottom: 10%;
+    text-decoration: underline;
+}
+
+.topTemas {
+    align-items: flex-start;
+    padding: 5px;
+    width: 93%;
+    color: white;
+}
+
+.topTemas h3 {
+    text-decoration: underline;
+}
+
+
+.topTemas p {
+    padding-left: 5px;
+    margin-top: 1%;
+    cursor: pointer;
+}
+
+/* FIN Barra lateral */
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    font-size: 80%;
+    margin-top: 7%;
+}
+
+.logoFooter {
+    margin-left: 1.5%;
+    margin-right: 3%;
+    width: 23%;
+    height: 67%;
+}
+
+/* Versión movil */
+@media (max-width: 1030px) {
+    .grid-container {
+        grid-template-columns: auto;
+        grid-template-rows: 8% 72% auto;
+        grid-gap: 5px;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+    }
+
+    .link {
+        display: block;
+        color: white;
+        text-decoration: none;
+        transition: .25s;
+    }
+
+    .link:hover {
+        color: #46494c;
+    }
+
+    .temaBox div:nth-child(2) {
+        min-width: 75%;
+    }
+
+    .loginBTN {
+        width: 80%;
+    }
+
+    .hide-scroll {
+        width: 95%;
+        margin: 2.5%;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .login,
+    .logout {
+        height: 0px;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .login h3 {
+        margin-top: 0;
+    }
+
+    .login a,
+    .registro a {
+        margin-bottom: 0%;
+    }
+
+    .logout a {
+        margin-bottom: 7%;
+    }
+
+    .logoutBTN {
+        margin-bottom: 15%;
+    }
+
+    /* Para que el formulario tenga más tamaño */
+    #loginForm {
+        width: 60%;
+    }
+
+    .abrirlogin {
+        height: 85%;
+        flex-shrink: 0;
+        display: flex;
+        text-align: center;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logoFooter {
+        order: -1;
+    }
+}
+
+@media (max-width: 459px) {
+    .logo {
+        width: 25%;
+        height: 80%;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .link {
+        margin-right: 20%;
+        font-size: 140%;
+    }
+
+    #btnCargarMas {
+        width: 35%;
+    }
+
+    #elegirRespuesta {
+        display: none;
+    }
+
+    #mensajeEnviadoRespuesta {
+        width: 35%;
+    }
+
+    .responderBTN {
+        width: 65%;
+    }
+
+    .login,
+    .registro,
+    .logout {
+        margin-top: 25%;
+        margin-left: 2%;
+        width: 96%;
+    }
+
+    .registro {
+        margin-top: 15%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        height: 100%;
+    }
+
+    .logout a {
+        padding: 6%;
+    }
+
+    .footer {
+        margin-bottom: -2.5%;
+    }
+
+    .logoFooter {
+        width: 21.5%;
+        height: 36%;
+        margin-bottom: -2%;
+    }
+}
+
+@media (min-width: 460px) and (max-width: 1030px) {
+    .logo {
+        width: 16%;
+        height: 90%;
+    }
+
+    .link {
+        margin-left: 10%;
+        font-size: 190%;
+    }
+
+    #elegirRespuesta {
+        width: 30%;
+    }
+
+    .login,
+    .registro,
+    .logout {
+        margin-top: 15%;
+        margin-left: 22%;
+        width: 56%;
+    }
+
+    .registro {
+        margin-top: 5%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        height: 100%;
+    }
+
+    .logout a {
+        padding: 4%;
+    }
+
+    .footer {
+        margin-bottom: -.5%;
+    }
+
+    .logoFooter {
+        width: 10.5%;
+        height: 50%;
+        margin-bottom: -1%;
+        margin-left: 2.7%;
+    }
+}
