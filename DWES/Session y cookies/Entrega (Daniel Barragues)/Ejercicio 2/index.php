@@ -42,7 +42,7 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>Amazonias - Tu web favorita de compras</title>
+        <title>Amazonias! - Tu web favorita de compras</title>
         <link rel="stylesheet" href="style.css">
         <script src="js.js"></script>
     </head>
