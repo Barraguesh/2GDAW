@@ -1,9 +1,10 @@
-body{
+body {
 	text-align: center;
-	color:#FFF;
+	color: #FFF;
 }
 
-.header, .footer {
+.header,
+.footer {
 	background: green;
 	border: 1px solid #FFF;
 }
@@ -11,6 +12,10 @@ body{
 .aside {
 	background: red;
 	border: 1px solid #FFF;
+}
+
+.flex {
+	
 }
 
 .morado {
