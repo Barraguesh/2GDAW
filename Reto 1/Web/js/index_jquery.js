@@ -31,7 +31,7 @@ function volverOrigen(){
       method:'POST',
       data:'\"WEB_1\".ON_ORIGEN=false',
       success:function(e){
-        console.log("Funciona, se ha enviado: "+'\"WEB_1\".ON_ORIGEN=true');
+        console.log("Funciona, se ha enviado: "+'\"WEB_1\".ON_ORIGEN=false');
       },
       error:function(){
         console.log("errores");

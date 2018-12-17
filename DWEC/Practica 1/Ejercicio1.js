@@ -67,10 +67,10 @@ class Persona {
     }
 
     toString() {
-        
+        return (this.nombre + "," + this.edad +"," + this.DNI +"," + this.sexo +"," + this.peso +"," + this.altura);
     }
 
     generaDNI() {
-
+        
     }
 }

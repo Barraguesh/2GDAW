@@ -1,0 +1,34 @@
+body {
+    text-align: center;
+    color: #FFF;
+}
+
+.header,
+.footer {
+    background: green;
+    border: 1px solid #FFF;
+}
+
+.numbers {
+    background: blue;
+    border: 1px solid #FFF;
+    padding: 10px;
+}
+
+.letters {
+    background: gray;
+    border: 1px solid #FFF;
+    padding: 10px;
+}
+
+.changingDiv {
+    background: cyan;
+    border: 1px solid #FFF;
+    justify-content: center;
+}
+
+.faces {
+    background: orange;
+    border: 1px solid #FFF;
+    padding: 10px;
+}
