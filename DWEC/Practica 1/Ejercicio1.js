@@ -23,6 +23,7 @@ class Persona {
     //Setters
     setNombre(nombre) {
         this.nombre = nombre;
+        console.log(this.nombre);
     }
 
     setNombre(edad) {
