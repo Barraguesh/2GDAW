@@ -1,4 +1,5 @@
 <?php
+session_start();
 //Configuración global
 require_once 'config/global.php';
 
