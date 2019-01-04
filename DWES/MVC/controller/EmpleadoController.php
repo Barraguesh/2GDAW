@@ -13,6 +13,9 @@
                 case "alta":
                     $this->alta();
                     break;
+                case "eliminar":
+                    $this->eliminar();
+                    break;
             }
         }
 
@@ -37,6 +40,16 @@
 
             $empleado = new Empleado();
             $empleadoAlta = $empleado->altaEmpleado();
+
+            $this->carga();
+        }
+
+        public function eliminar()
+        {
+            require_once "model/Empleado.php";
+
+            $empleado = new Empleado();
+            $empleadoEliminar = $empleado->eliminarEmpleado();
 
             $this->carga();
         }

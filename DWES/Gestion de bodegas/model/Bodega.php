@@ -1,8 +1,8 @@
 <?php
-class Empleado
+class Bodega
 {
     private $nombre;
-    private $apellidos;
+    private $localizacion;
     private $email;
     private $telefono;
 
@@ -26,21 +26,21 @@ class Empleado
     }
 
     /**
-     * Get the value of apellidos
+     * Get the value of localizacion
      */
-    public function getApellidos()
+    public function getLocalizacion()
     {
-        return $this->apellidos;
+        return $this->localizacion;
     }
 
     /**
-     * Set the value of apellidos
+     * Set the value of localizacion
      *
      * @return  self
      */
-    public function setApellidos($apellidos)
+    public function setLocalizacion($localizacion)
     {
-        $this->apellidos = $apellidos;
+        $this->localizacion = $localizacion;
 
         return $this;
     }
@@ -85,73 +85,68 @@ class Empleado
         return $this;
     }
 
-    public function cargarEmpleados()
+    public function cargarBodegas()
     {
-        require_once "controller/EmpleadoController.php";
+        require_once "controller/BodegaController.php";
 
         $conectar = new Conectar();
         $conexion = $conectar->conexion();
-        $empleados = [];
+        $bodegas = [];
 
-        $select = $conexion->prepare("select * from Empleados");
+        $select = $conexion->prepare("select * from bodega");
         $select->execute();
 
 
         if ($select->rowCount() != 0) {
             while ($fila = $select->fetchObject()) {
-                $empleado = new Empleado();
-                $empleado->setNombre($fila->nombre);
-                $empleado->setApellidos($fila->apellidos);
-                $empleado->setEmail($fila->email);
-                $empleado->setTelefono($fila->telefono);
-                array_push($empleados, $empleado);
+                $bodega = new Bodega();
+                $bodega->setNombre($fila->nombre);
+                $bodega->setLocalizacion($fila->localizacion);
+                $bodega->setEmail($fila->email);
+                $bodega->setTelefono($fila->telefono);
+                array_push($bodegas, $bodega);
             }
         }
 
-        return $empleados;
+        return $bodegas;
     }
 
-    public function altaEmpleado()
+    public function altaBodega()
     {
-        $empleado = new Empleado();
+        $bodega = new Bodega();
         $conectar = new Conectar();
         $conexion = $conectar->conexion();
 
         try {
-            $insert = $conexion->prepare("INSERT INTO `Empleados` (`nombre`, `apellidos`, `email`, `telefono`) VALUES (?, ?, ?, ?)");
+            $insert = $conexion->prepare("INSERT INTO `bodega` (`nombre`, `apellidos`, `email`, `telefono`) VALUES (?, ?, ?, ?)");
             $insert->bindParam(1, $_GET["nombre"]);
-            $insert->bindParam(2, $_GET["apellidos"]);
+            $insert->bindParam(2, $_GET["localizacion"]);
             $insert->bindParam(3, $_GET["email"]);
             $insert->bindParam(4, $_GET["telefono"]);
             $insert->execute();
             
-            $controlador = new EmpleadoController();
+            $controlador = new bodegaController();
             $controlador->carga();
         } catch (PDOException $e) {
-            echo "No se ha podido introducir el usuario.<br/>";
+            echo "No se ha podido introducir la bodega.<br/>";
             echo $e;
         }
     }
 
-    public function eliminarEmpleado()
+    public function eliminarBodega()
     {
-        $empleado = new Empleado();
+        $bodega = new bodega();
         $conectar = new Conectar();
         $conexion = $conectar->conexion();
 
-        $select = $conexion->prepare("SELECT MAX(ID) as maxID FROM Empleados");
-        $select->execute();
-        $maxID = $select->fetchObject();
-        $maxID = $maxID->maxID;
-
-        $delete = $conexion->prepare("DELETE FROM Empleados WHERE ID = ?");
+        $delete = $conexion->prepare("DELETE FROM bodega WHERE ID = ?");
         $delete->bindParam(1, $_GET["eliminar"]);
         $delete->execute();
 
-        $reorganizar = $conexion->prepare("SET  @num := 0; UPDATE Empleados SET ID = @num := (@num+1); ALTER TABLE Empleados AUTO_INCREMENT = 1;");
+        $reorganizar = $conexion->prepare("SET  @num := 0; UPDATE bodega SET ID = @num := (@num+1); ALTER TABLE bodega AUTO_INCREMENT = 1;");
         $reorganizar->execute();
 
-        $controlador = new EmpleadoController();
+        $controlador = new bodegaController();
         $controlador->carga();
     }
 }
