@@ -14,12 +14,31 @@
     <body>
         <?php include_once "menu.php"?>
         <div class="container" style="margin-top: 5%;">
-            <header>
+            <header style="text-align:center;">
                 <h1>Nueva bodega</h1>
             </header>
-            <div class="mt-5">
-                <form>
-
+            <div class="mt-5 row">
+                <form class="offset-3 col-6" action="index.php" method="get">
+                    Nombre<br />
+                    <input type="text" name="nombre" autofocus><br />
+                    Localizacion<br>
+                    <input type="text" name="localizacion" placeholder="Ejemplo (Provincia)"><br />
+                    Email<br>
+                    <input type="email" name="email"><br />
+                    Telefono<br>
+                    <input type="text" name="telefono"><br />
+                    Persona de contacto<br>
+                    <input type="text" name="contacto"><br>
+                    Fundación<br>
+                    <input type="text" name="fundacion"><br><br>
+                    ¿Tiene restaurante?<br>
+                    <input type="radio" name="restaurante" value="1">Si<br>
+                    <input type="radio" name="restaurante" value="0">No<br><br>
+                    ¿Tiene hotel?<br>
+                    <input type="radio" name="hotel" value="1">Si<br>
+                    <input type="radio" name="hotel" value="0">No<br>
+                    <input type="text" name="action" value="nueva" class="d-none"><br />
+                    <input type="submit" value="Añadir bodega">
                 </form>
             </div>
         </div>

@@ -6,13 +6,15 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navigationContent">
-        <!--<ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <form action="index.php" method="get">
+                    <button style="border:none;" class="nav-link">Inicio<span class="sr-only">(current)</span></button>
+                </form>
             </li>
-            <li class="nav-item">
+            <!--<li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
-            </li>
-        </ul>-->
+            </li>-->
+        </ul>
     </div>
 </nav>

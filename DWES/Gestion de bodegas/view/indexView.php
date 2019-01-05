@@ -46,7 +46,7 @@
                                         echo "<td>", $value->getEmail(), "</td>";
                                         echo "<td>", $value->getTelefono(), "</td>";
                                         echo "<td class='container' style='width: 18%;'><div class='row' style='justify-content: space-evenly;'><form class='col-2' action='index.php' method='get'>
-                                                <button class='btn btn-default' name='ver' value=", $key+1, "'>Ver</button>
+                                                <button class='btn btn-default' name='ver' value='", $key+1, "'>Ver</button>
                                                 <input type='text' name='action' value='bodegaView' class='d-none'>
                                                 </form>";
                                         echo "<form class='col-6' action='index.php' method='get'>

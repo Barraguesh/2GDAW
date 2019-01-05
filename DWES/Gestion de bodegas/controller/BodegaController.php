@@ -8,10 +8,13 @@
         {
             switch ($action) {
                 case "index":
-                    $this->carga();
+                    $this->cargaBodegas();
                     break;
                 case "nuevaBodegaView":
                     $this->nuevaBodegaView();
+                    break;
+                case "bodegaView":
+                    $this->cargaBodegaView();
                     break;
                 case "nueva":
                     $this->nueva();
@@ -33,8 +36,13 @@
             require_once "view/nuevaBodegaView.php";
         }
 
+        public function bodegaView($vinos, $bodega)
+        {
+            require_once "view/bodegaView.php";
+        }
+
         /* DB stuff */
-        public function carga()
+        public function cargaBodegas()
         {
             require_once "model/Bodega.php";
 
@@ -44,14 +52,29 @@
             $this->index($bodegas);
         }
 
+        public function cargaBodegaView()
+        {
+            require_once "controller/VinoController.php";
+            require_once "model/Bodega.php";
+
+            $bodega = new Bodega();
+            $bodegaCargada = $bodega->cargarBodega();
+            $bodegaArray = [$bodegaCargada->getNombre(),$bodegaCargada->getLocalizacion(),$bodegaCargada->getEmail(),$bodegaCargada->getTelefono(),$bodegaCargada->getContacto(),$bodegaCargada->getFundacion(),$bodegaCargada->getRestaurante(),$bodegaCargada->getHotel()];
+
+            $vino = new VinoController();
+            $vinos = $vino->cargarVinos();
+
+            $this->bodegaView($vinos, $bodegaArray);
+        }
+
         public function nueva()
         {
-            require_once "model/bodega.php";
+            require_once "model/Bodega.php";
 
             $bodega = new Bodega();
             $bodega->altaBodega();
 
-            $this->carga();
+            $this->cargaBodegas();
         }
 
         public function eliminar()
@@ -61,6 +84,6 @@
             $bodega = new Bodega();
             $bodega->eliminarBodega();
 
-            $this->carga();
+            $this->cargaBodegas();
         }
     }

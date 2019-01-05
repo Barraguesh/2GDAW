@@ -1,8 +1,8 @@
 <?php
-class Bodega
+class Vino
 {
     private $nombre;
-    private $localizacion;
+    private $tipo;
     private $email;
     private $telefono;
     private $contacto;
@@ -30,21 +30,21 @@ class Bodega
     }
 
     /**
-     * Get the value of localizacion
+     * Get the value of tipo
      */
-    public function getLocalizacion()
+    public function getTipo()
     {
-        return $this->localizacion;
+        return $this->tipo;
     }
 
     /**
-     * Set the value of localizacion
+     * Set the value of tipo
      *
      * @return  self
      */
-    public function setLocalizacion($localizacion)
+    public function setTipo($tipo)
     {
-        $this->localizacion = $localizacion;
+        $this->tipo = $tipo;
 
         return $this;
     }
@@ -169,60 +169,53 @@ class Bodega
         return $this;
     }
 
-    public function cargarBodegas()
+    public function cargarVinos()
     {
-        require_once "controller/BodegaController.php";
+        require_once "controller/VinoController.php";
 
         $conectar = new Conectar();
         $conexion = $conectar->conexion();
-        $bodegas = [];
+        $vinos = [];
 
-        $select = $conexion->prepare("select * from bodega");
+        $select = $conexion->prepare("select * from vino where bodegaID = ?");
+        $select->bindParam(1, $_GET["ver"]);
         $select->execute();
 
 
         if ($select->rowCount() != 0) {
             while ($fila = $select->fetchObject()) {
-                $bodega = new Bodega();
-                $bodega->setNombre($fila->nombre);
-                $bodega->setLocalizacion($fila->localizacion);
-                $bodega->setEmail($fila->email);
-                $bodega->setTelefono($fila->telefono);
-                array_push($bodegas, $bodega);
+                $vino = new Vino();
+                $vino->setNombre($fila->nombre);
+                $vino->setTipo($fila->tipo);
+                array_push($vinos, $vino);
             }
         }
 
-        return $bodegas;
+        return $vinos;
     }
 
-    public function cargarBodega()
+    public function cargarVino()
     {
-        require_once "controller/BodegaController.php";
+        require_once "controller/VinoController.php";
 
         $conectar = new Conectar();
         $conexion = $conectar->conexion();
-        $bodegas = [];
 
-        $select = $conexion->prepare("select * from bodega where ID = ?");
+        $select = $conexion->prepare("select * from vino where ID = ?");
         $select->bindParam(1, $_GET["ver"]);
         $select->execute();
 
 
-        $bodegaCargada = $select->fetchObject();
-        $bodega = new Bodega();
-        $bodega->setNombre($bodegaCargada->nombre);
-        $bodega->setLocalizacion($bodegaCargada->localizacion);
-        $bodega->setEmail($bodegaCargada->email);
-        $bodega->setTelefono($bodegaCargada->telefono);
-        $bodega->setContacto($bodegaCargada->contacto);
-        $bodega->setFundacion($bodegaCargada->fundacion);
-        $bodega->setRestaurante($bodegaCargada->restaurante);
-        $bodega->setHotel($bodegaCargada->hotel);
+        $vinoDB->fetchObject();
+        $vino = new Vino();
+        $vino->setNombre($fila->nombre);
+        $vino->setTipo($fila->tipo);
+        $vino;
 
-        return $bodega;
+        return $vino;
     }
 
-    public function altaBodega()
+    public function altaVino()
     {
         $bodega = new Bodega();
         $conectar = new Conectar();
@@ -239,6 +232,9 @@ class Bodega
             $insert->bindParam(7, $_GET["restaurante"]);
             $insert->bindParam(8, $_GET["hotel"]);
             $insert->execute();
+            
+            $controlador = new BodegaController();
+            $controlador->carga();
         } catch (PDOException $e) {
             echo "No se ha podido introducir la bodega.<br/>";
             echo $e;
@@ -257,5 +253,8 @@ class Bodega
 
         $reorganizar = $conexion->prepare("SET  @num := 0; UPDATE bodega SET ID = @num := (@num+1); ALTER TABLE bodega AUTO_INCREMENT = 1;");
         $reorganizar->execute();
+
+        $controlador = new bodegaController();
+        $controlador->carga();
     }
 }

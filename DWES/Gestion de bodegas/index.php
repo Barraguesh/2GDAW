@@ -20,10 +20,10 @@ if (isset($_GET["controller"])) {
 function cargarControlador($controller)
 {
     switch ($controller) {
-        case 'bodega':
-            $strFileController='controller/bodega.php';
+        case 'vino':
+            $strFileController='controller/VinoController.php';
             require_once $strFileController;
-            $controllerObj=new BodegaController();
+            $controllerObj=new VinoController();
             break;
         
         default:
