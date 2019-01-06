@@ -54,6 +54,8 @@
                     <div class="offset-lg-2 col-lg-5">
                         <div class="row mb-1 ml-1">
                             <form action='index.php' method='get'>
+                                <input type='text' name='controller' value='vino' class='d-none'>
+                                <input type='text' name='ver' value='<?php echo $_GET["ver"]?>' class='d-none'>
                                 <button class='btn btn-primary' name='action' value='nuevoVinoView'>Nuevo vino</button>
                             </form>
                         </div>

@@ -10,6 +10,12 @@
                 case "index":
                     $this->cargarVinoView();
                     break;
+                case "nuevoVinoView":
+                    $this->nuevoVinoView();
+                    break;
+                case "nuevo":
+                    $this->nuevo();
+                    break;
                 case "eliminar":
                     $this->eliminar();
                     break;
@@ -22,7 +28,10 @@
             require_once "view/vinoView.php";
         }
 
-
+        public function nuevoVinoView()
+        {
+            require_once "view/nuevoVinoView.php";
+        }
 
         /* DB stuff */
         public function cargarVinoView()
@@ -35,14 +44,16 @@
             $this->vinoView($vinoCargado);
         }
 
-        public function nueva()
+        public function nuevo()
         {
             require_once "model/Vino.php";
+            require_once "controller/BodegaController.php";
 
             $vino = new Vino();
             $vino->altaVino();
 
-            $this->cargarVinoView();
+            $bodega = new BodegaController();
+            $bodega->cargaBodegaView();
         }
 
         public function eliminar()

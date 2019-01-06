@@ -182,24 +182,19 @@ class Vino
 
     public function altaVino()
     {
-        $bodega = new Bodega();
+        $vino = new Vino();
         $conectar = new Conectar();
         $conexion = $conectar->conexion();
 
         try {
-            $insert = $conexion->prepare("INSERT INTO `bodega` (`nombre`, `localizacion`, `email`, `telefono`, `contacto`, `fundacion`, `restaurante`, `hotel`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+            $insert = $conexion->prepare("INSERT INTO `vino` (`nombre`, `descripcion`, `anno`, `alcohol`, `tipo`, `bodegaID`) VALUES (?, ?, ?, ?, ?, ?)");
             $insert->bindParam(1, $_GET["nombre"]);
-            $insert->bindParam(2, $_GET["localizacion"]);
-            $insert->bindParam(3, $_GET["email"]);
-            $insert->bindParam(4, $_GET["telefono"]);
-            $insert->bindParam(5, $_GET["contacto"]);
-            $insert->bindParam(6, $_GET["fundacion"]);
-            $insert->bindParam(7, $_GET["restaurante"]);
-            $insert->bindParam(8, $_GET["hotel"]);
+            $insert->bindParam(2, $_GET["descripcion"]);
+            $insert->bindParam(3, $_GET["anno"]);
+            $insert->bindParam(4, $_GET["alcohol"]);
+            $insert->bindParam(5, $_GET["tipo"]);
+            $insert->bindParam(6, $_GET["ver"]);
             $insert->execute();
-            
-            $controlador = new BodegaController();
-            $controlador->carga();
         } catch (PDOException $e) {
             echo "No se ha podido introducir la bodega.<br/>";
             echo $e;
