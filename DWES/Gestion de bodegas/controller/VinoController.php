@@ -8,7 +8,10 @@
         {
             switch ($action) {
                 case "index":
-                    $this->vinoView();
+                    $this->cargarVinoView();
+                    break;
+                case "eliminar":
+                    $this->eliminar();
                     break;
             }
         }
@@ -27,19 +30,9 @@
             require_once "model/Vino.php";
 
             $vino = new Vino();
-            $vinos = $vino->cargarVino();
+            $vinoCargado = $vino->cargarVino();
 
-            $this->vinoView($vino);
-        }
-
-        public function cargarVinos()
-        {
-            require_once "model/Vino.php";
-
-            $vino = new Vino();
-            $vinos = $vino->cargarVinos();
-
-            return $vinos;
+            $this->vinoView($vinoCargado);
         }
 
         public function nueva()
@@ -54,11 +47,10 @@
 
         public function eliminar()
         {
-            require_once "model/Bodega.php";
+            require_once "model/Vino.php";
 
-            $vino = new Bodega();
-            $vino->eliminarBodega();
+            $vino = new Vino();
+            $vino->eliminarVino();
 
-            $this->cargarVinoView();
         }
     }

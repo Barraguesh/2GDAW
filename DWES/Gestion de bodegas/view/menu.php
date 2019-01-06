@@ -12,9 +12,17 @@
                     <button style="border:none;" class="nav-link">Inicio<span class="sr-only">(current)</span></button>
                 </form>
             </li>
-            <!--<li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>-->
+            <?php if (isset($_GET["volverVino"])) {
+    ?>
+            <li class="nav-item">
+                <form action="index.php" method="get">
+                    <button style="border:none;" class="nav-link" name='ver' value='<?php echo $_GET["volverVino"] ?>'>Volver<span
+                            class="sr-only">(current)</span></button>
+                    <input type='text' name='action' value='bodegaView' class='d-none'>
+                </form>
+            </li>
+            <?php
+}?>
         </ul>
     </div>
 </nav>

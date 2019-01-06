@@ -15,40 +15,25 @@
         <?php include_once "menu.php"?>
         <div class="container" style="margin-top: 5%;">
             <header>
-                <h1>Panel de gestion: bodega</h1>
+                <h1>Panel de gestion: vino</h1>
             </header>
             <div class="mt-5">
                 <div class="row">
                     <div class="offset-lg-1 col-lg-5">
-                        <table class="table table-striped table-responsive-sm mb-5">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Tipo</th>
-                                    <th scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                foreach ($vinos as $key => $value) {
-                                    echo "<tr>";
-                                    echo "<th scope='row'>", $key+1,"</th>";
-                                    echo "<td>", $value->getNombre(), "</td>";
-                                    echo "<td>", $value->getTipo(), "</td>";
-                                    echo "<td class='container' style='width: 45%;'><div class='row' style='justify-content: space-evenly;'><form class='col-2' action='index.php' method='get'>
-                                            <button class='btn btn-default' name='ver' value=", $key+1, "'>Ver</button>
-                                            <input type='text' name='controller' value='vino' class='d-none'>
-                                            </form>";
-                                    echo "<form class='col-6' action='index.php' method='get'>
-                                            <button type='submit' class='btn btn-danger' name='eliminar' value=", $key+1, "'>Eliminar</button>
-                                            <input type='text' name='action' value='eliminar' class='d-none'>
-                                            </form></div></td>";
-                                    echo "</tr>";
-                                }
-                                ?>
-                            </tbody>
-                        </table>
+                        <form class="offset-3 col-6" action="index.php" method="get">
+                            Nombre<br />
+                            <input type="text" name="nombre" autofocus value="<?php echo $vino[0]; ?>"><br />
+                            Descripcion<br>
+                            <input type="text" name="localizacion" value="<?php echo $vino[1]; ?>"><br />
+                            Año<br>
+                            <input type="email" name="email" value="<?php echo $vino[2]; ?>"><br />
+                            Alcohol<br>
+                            <input type="text" name="telefono" value="<?php echo $vino[3]; ?>"><br />
+                            Tipo<br>
+                            <input type="text" name="contacto" value="<?php echo $vino[4]; ?>"><br>
+                            <input type="text" name="action" value="nueva" class="d-none"><br />
+                            <input type="submit" value="Cambiar vino">
+                        </form>
                     </div>
                 </div>
             </div>

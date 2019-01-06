@@ -56,12 +56,13 @@
         {
             require_once "controller/VinoController.php";
             require_once "model/Bodega.php";
+            require_once "model/Vino.php";
 
             $bodega = new Bodega();
             $bodegaCargada = $bodega->cargarBodega();
-            $bodegaArray = [$bodegaCargada->getNombre(),$bodegaCargada->getLocalizacion(),$bodegaCargada->getEmail(),$bodegaCargada->getTelefono(),$bodegaCargada->getContacto(),$bodegaCargada->getFundacion(),$bodegaCargada->getRestaurante(),$bodegaCargada->getHotel()];
+            $bodegaArray = [$bodegaCargada->getNombre(),$bodegaCargada->getLocalizacion(),$bodegaCargada->getEmail(),$bodegaCargada->getTelefono(),$bodegaCargada->getContacto(),$bodegaCargada->getFundacion(),$bodegaCargada->getRestaurante(),$bodegaCargada->getHotel(),$_GET["ver"]];
 
-            $vino = new VinoController();
+            $vino = new Vino();
             $vinos = $vino->cargarVinos();
 
             $this->bodegaView($vinos, $bodegaArray);

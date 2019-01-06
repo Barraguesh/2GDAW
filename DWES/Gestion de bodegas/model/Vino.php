@@ -1,6 +1,7 @@
 <?php
 class Vino
 {
+    private $ID;
     private $nombre;
     private $tipo;
     private $email;
@@ -9,6 +10,25 @@ class Vino
     private $fundacion;
     private $restaurante;
     private $hotel;
+
+    /**
+     * Get the value of ID
+     */
+    public function getID()
+    {
+        return $this->ID;
+    }
+
+    /**
+     * Set the value of ID
+     *
+     * @return  self
+     */
+    public function setID($ID)
+    {
+        $this->ID = $ID;
+        return $this;
+    }
 
     /**
      * Get the value of nombre
@@ -50,121 +70,61 @@ class Vino
     }
 
     /**
-     * Get the value of email
+     * Get the value of descripcion
      */
-    public function getEmail()
+    public function getDescripcion()
     {
-        return $this->email;
+        return $this->descripcion;
     }
 
     /**
-     * Set the value of email
+     * Set the value of descripcion
      *
      * @return  self
      */
-    public function setEmail($email)
+    public function setDescripcion($descripcion)
     {
-        $this->email = $email;
+        $this->descripcion = $descripcion;
 
         return $this;
     }
 
     /**
-     * Get the value of telefono
+     * Get the value of anno
      */
-    public function getTelefono()
+    public function getAnno()
     {
-        return $this->telefono;
+        return $this->anno;
     }
 
     /**
-     * Set the value of telefono
+     * Set the value of anno
      *
      * @return  self
      */
-    public function setTelefono($telefono)
+    public function setAnno($anno)
     {
-        $this->telefono = $telefono;
+        $this->anno = $anno;
 
         return $this;
     }
 
     /**
-     * Get the value of contacto
+     * Get the value of alcohol
      */
-    public function getContacto()
+    public function getAlcohol()
     {
-        return $this->contacto;
+        return $this->alcohol;
     }
 
     /**
-     * Set the value of contacto
+     * Set the value of alcohol
      *
      * @return  self
      */
-    public function setContacto($contacto)
+    public function setAlcohol($alcohol)
     {
-        $this->contacto = $contacto;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of fundacion
-     */
-    public function getFundacion()
-    {
-        return $this->fundacion;
-    }
-
-    /**
-     * Set the value of fundacion
-     *
-     * @return  self
-     */
-    public function setFundacion($fundacion)
-    {
-        $this->fundacion = $fundacion;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of restaurante
-     */
-    public function getRestaurante()
-    {
-        return $this->restaurante;
-    }
-
-    /**
-     * Set the value of restaurante
-     *
-     * @return  self
-     */
-    public function setRestaurante($restaurante)
-    {
-        $this->restaurante = $restaurante;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of hotel
-     */
-    public function getHotel()
-    {
-        return $this->hotel;
-    }
-
-    /**
-     * Set the value of hotel
-     *
-     * @return  self
-     */
-    public function setHotel($hotel)
-    {
-        $this->hotel = $hotel;
+        $this->alcohol = $alcohol;
 
         return $this;
     }
@@ -185,6 +145,7 @@ class Vino
         if ($select->rowCount() != 0) {
             while ($fila = $select->fetchObject()) {
                 $vino = new Vino();
+                $vino->setID($fila->ID);
                 $vino->setNombre($fila->nombre);
                 $vino->setTipo($fila->tipo);
                 array_push($vinos, $vino);
@@ -206,13 +167,17 @@ class Vino
         $select->execute();
 
 
-        $vinoDB->fetchObject();
+        $vinoDB = $select->fetchObject();
         $vino = new Vino();
-        $vino->setNombre($fila->nombre);
-        $vino->setTipo($fila->tipo);
-        $vino;
+        $vino->setNombre($vinoDB->nombre);
+        $vino->setDescripcion($vinoDB->descripcion);
+        $vino->setAnno($vinoDB->anno);
+        $vino->setAlcohol($vinoDB->alcohol);
+        $vino->setTipo($vinoDB->tipo);
 
-        return $vino;
+        $vinoArray = [$vino->getNombre(), $vino->getDescripcion(), $vino->getAnno(), $vino->getAlcohol(), $vino->getTipo()];
+
+        return $vinoArray;
     }
 
     public function altaVino()
@@ -241,20 +206,20 @@ class Vino
         }
     }
 
-    public function eliminarBodega()
+    public function eliminarVino()
     {
-        $bodega = new bodega();
+        require_once "controller/BodegaController.php";
+
         $conectar = new Conectar();
         $conexion = $conectar->conexion();
-
-        $delete = $conexion->prepare("DELETE FROM bodega WHERE ID = ?");
+        $delete = $conexion->prepare("DELETE FROM vino WHERE ID = ?");
         $delete->bindParam(1, $_GET["eliminar"]);
         $delete->execute();
 
-        $reorganizar = $conexion->prepare("SET  @num := 0; UPDATE bodega SET ID = @num := (@num+1); ALTER TABLE bodega AUTO_INCREMENT = 1;");
+        $reorganizar = $conexion->prepare("SET  @num := 0; UPDATE vino SET ID = @num := (@num+1); ALTER TABLE vino AUTO_INCREMENT = 1;");
         $reorganizar->execute();
 
-        $controlador = new bodegaController();
-        $controlador->carga();
+        $bodega = new BodegaController();
+        $bodega->cargaBodegaView();
     }
 }
