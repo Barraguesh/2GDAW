@@ -22,6 +22,9 @@
                 case "eliminar":
                     $this->eliminar();
                     break;
+                case "cambiar":
+                    $this->cambiar();
+                    break;
             }
         }
 
@@ -86,5 +89,14 @@
             $bodega->eliminarBodega();
 
             $this->cargaBodegas();
+        }
+
+        public function cambiar() {
+            require_once "model/Bodega.php";
+
+            $bodega = new Bodega();
+            $bodega->cambiarBodega();
+
+            $this->cargaBodegaView();
         }
     }

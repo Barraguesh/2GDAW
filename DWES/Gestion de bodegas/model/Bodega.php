@@ -1,6 +1,7 @@
 <?php
 class Bodega
 {
+    private $ID;
     private $nombre;
     private $localizacion;
     private $email;
@@ -10,6 +11,25 @@ class Bodega
     private $restaurante;
     private $hotel;
 
+    /**
+     * Get the value of ID
+     */
+    public function getID()
+    {
+        return $this->ID;
+    }
+
+    /**
+     * Set the value of ID
+     *
+     * @return  self
+     */
+    public function setID($nombre)
+    {
+        $this->ID = $ID;
+        return $this;
+    }
+    
     /**
      * Get the value of nombre
      */
@@ -204,7 +224,11 @@ class Bodega
         $bodegas = [];
 
         $select = $conexion->prepare("select * from bodega where ID = ?");
-        $select->bindParam(1, $_GET["ver"]);
+        if (isset($_GET["ver"])) {
+            $select->bindParam(1, $_GET["ver"]);
+        } else {
+            $select->bindParam(1, $_GET["ID"]);
+        }
         $select->execute();
 
 
@@ -243,6 +267,25 @@ class Bodega
             echo "No se ha podido introducir la bodega.<br/>";
             echo $e;
         }
+    }
+
+    public function cambiarBodega()
+    {
+        $bodega = new Bodega();
+        $conectar = new Conectar();
+        $conexion = $conectar->conexion();
+
+        $update = $conexion->prepare("UPDATE `bodega` SET `nombre`= ?,`localizacion`= ?,`email`= ?,`telefono`= ?,`contacto`= ?,`fundacion`= ?,`restaurante`= ?,`hotel`= ? WHERE ID = ?");
+        $update->bindParam(1, $_GET["nombre"]);
+        $update->bindParam(2, $_GET["localizacion"]);
+        $update->bindParam(3, $_GET["email"]);
+        $update->bindParam(4, $_GET["telefono"]);
+        $update->bindParam(5, $_GET["contacto"]);
+        $update->bindParam(6, $_GET["fundacion"]);
+        $update->bindParam(7, $_GET["restaurante"]);
+        $update->bindParam(8, $_GET["hotel"]);
+        $update->bindParam(9, $_GET["ID"]);
+        $update->execute();
     }
 
     public function eliminarBodega()

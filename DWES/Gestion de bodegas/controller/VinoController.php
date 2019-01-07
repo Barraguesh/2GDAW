@@ -19,6 +19,9 @@
                 case "eliminar":
                     $this->eliminar();
                     break;
+                case "cambiar":
+                    $this->cambiar();
+                    break;
             }
         }
 
@@ -63,5 +66,14 @@
             $vino = new Vino();
             $vino->eliminarVino();
 
+        }
+
+        public function cambiar() {
+            require_once "model/Vino.php";
+
+            $vino = new Vino();
+            $vino->cambiarVino();
+
+            $this->cargarVinoView();
         }
     }

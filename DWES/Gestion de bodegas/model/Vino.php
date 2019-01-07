@@ -138,7 +138,11 @@ class Vino
         $vinos = [];
 
         $select = $conexion->prepare("select * from vino where bodegaID = ?");
-        $select->bindParam(1, $_GET["ver"]);
+        if (isset($_GET["ver"])) {
+            $select->bindParam(1, $_GET["ver"]);
+        } else {
+            $select->bindParam(1, $_GET["ID"]);
+        }
         $select->execute();
 
 
@@ -199,6 +203,22 @@ class Vino
             echo "No se ha podido introducir la bodega.<br/>";
             echo $e;
         }
+    }
+
+    public function cambiarVino()
+    {
+        $vino = new Vino();
+        $conectar = new Conectar();
+        $conexion = $conectar->conexion();
+
+        $update = $conexion->prepare("UPDATE `vino` SET `nombre`= ?,`descripcion`= ?,`anno`= ?,`alcohol`= ?,`tipo`= ? WHERE ID = ?");
+        $update->bindParam(1, $_GET["nombre"]);
+        $update->bindParam(2, $_GET["descripcion"]);
+        $update->bindParam(3, $_GET["anno"]);
+        $update->bindParam(4, $_GET["alcohol"]);
+        $update->bindParam(5, $_GET["tipo"]);
+        $update->bindParam(6, $_GET["ver"]);
+        $update->execute();
     }
 
     public function eliminarVino()

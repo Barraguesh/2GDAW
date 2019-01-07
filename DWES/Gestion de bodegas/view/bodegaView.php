@@ -20,7 +20,7 @@
             <div class="mt-5">
                 <div class="row">
                     <div class="col-lg-5">
-                        <form class="offset-3 col-6" action="index.php" method="get">
+                        <form class="offset-2 col-6" action="index.php" method="get">
                             Nombre<br />
                             <input type="text" name="nombre" autofocus value="<?php echo $bodega[0]; ?>"><br />
                             Localizacion<br>
@@ -47,7 +47,8 @@
                             <input type="radio" name="hotel" value="0" <?php if ($bodega[7] == 0) {
     echo "checked='checked'";
 }?>>No<br>
-                            <input type="text" name="action" value="nueva" class="d-none"><br />
+                            <input type="text" name="action" value="cambiar" class="d-none"><br />
+                            <input type="text" name="ID" value="<?php echo $_GET["ver"]?>" class="d-none"><br />
                             <input type="submit" value="Cambiar bodega">
                         </form>
                     </div>
