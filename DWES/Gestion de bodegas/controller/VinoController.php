@@ -28,7 +28,7 @@
         /* Views */
         public function vinoView($vino)
         {
-            require_once "view/vinoView.php";
+            echo $twig->render('vinoView.html', $vino);
         }
 
         public function nuevoVinoView()

@@ -29,9 +29,18 @@
         }
 
         /* Views */
-        public function index($bodegas)
+        public function index($bodegasArray)
         {
-            require_once "view/indexView.php";
+            /* TWIG EVIROMENT */
+            require_once 'vendor/autoload.php';
+
+            $loader = new Twig_Loader_Filesystem('view');
+            $twig = new Twig_Environment($loader, array(
+                'cache' => false,
+            ));
+
+            echo $twig->render('indexView.html'), array("bodegas" => $bodegasArray);
+            /* END TWIG EVIROMENT */
         }
 
         public function nuevaBodegaView()
@@ -52,7 +61,18 @@
             $bodega = new Bodega();
             $bodegas = $bodega->cargarBodegas();
 
-            $this->index($bodegas);
+            $bodegasArray = [];
+
+            foreach ($bodegas as $key => $bodega) {
+                $x = 0;
+                $bodegasArray[$x] = $bodega->getNombre();
+                $bodegasArray[$x+1] = $bodega->getLocalizacion();
+                $bodegasArray[$x+2] = $bodega->getEmail();
+                $bodegasArray[$x+3] = $bodega->getTelefono();
+                $x = $x +4;
+            }
+
+            $this->index($bodegasArray);
         }
 
         public function cargaBodegaView()
@@ -91,7 +111,8 @@
             $this->cargaBodegas();
         }
 
-        public function cambiar() {
+        public function cambiar()
+        {
             require_once "model/Bodega.php";
 
             $bodega = new Bodega();
