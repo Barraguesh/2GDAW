@@ -24,7 +24,7 @@ class Bodega
      *
      * @return  self
      */
-    public function setID($nombre)
+    public function setID($ID)
     {
         $this->ID = $ID;
         return $this;
@@ -204,6 +204,7 @@ class Bodega
         if ($select->rowCount() != 0) {
             while ($fila = $select->fetchObject()) {
                 $bodega = new Bodega();
+                $bodega->setID($fila->ID);
                 $bodega->setNombre($fila->nombre);
                 $bodega->setLocalizacion($fila->localizacion);
                 $bodega->setEmail($fila->email);

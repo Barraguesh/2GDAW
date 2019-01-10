@@ -29,7 +29,7 @@
         }
 
         /* Views */
-        public function index($bodegasArray)
+        public function index($bodegas)
         {
             /* TWIG EVIROMENT */
             require_once 'vendor/autoload.php';
@@ -39,7 +39,7 @@
                 'cache' => false,
             ));
 
-            echo $twig->render('indexView.html'), array("bodegas" => $bodegasArray);
+            echo $twig->render('indexView.html', array("bodegas"=> $bodegas));
             /* END TWIG EVIROMENT */
         }
 
@@ -50,7 +50,16 @@
 
         public function bodegaView($vinos, $bodega)
         {
-            require_once "view/bodegaView.php";
+            /* TWIG EVIROMENT */
+            require_once 'vendor/autoload.php';
+
+            $loader = new Twig_Loader_Filesystem('view');
+            $twig = new Twig_Environment($loader, array(
+                'cache' => false,
+            ));
+
+            echo $twig->render('bodegaView.html', array("vinos"=>$vinos, "bodega"=>$bodega, "ver"=>$_GET["ver"]));
+            /* END TWIG EVIROMENT */
         }
 
         /* DB stuff */
@@ -61,18 +70,7 @@
             $bodega = new Bodega();
             $bodegas = $bodega->cargarBodegas();
 
-            $bodegasArray = [];
-
-            foreach ($bodegas as $key => $bodega) {
-                $x = 0;
-                $bodegasArray[$x] = $bodega->getNombre();
-                $bodegasArray[$x+1] = $bodega->getLocalizacion();
-                $bodegasArray[$x+2] = $bodega->getEmail();
-                $bodegasArray[$x+3] = $bodega->getTelefono();
-                $x = $x +4;
-            }
-
-            $this->index($bodegasArray);
+            $this->index($bodegas);
         }
 
         public function cargaBodegaView()
@@ -83,12 +81,11 @@
 
             $bodega = new Bodega();
             $bodegaCargada = $bodega->cargarBodega();
-            $bodegaArray = [$bodegaCargada->getNombre(),$bodegaCargada->getLocalizacion(),$bodegaCargada->getEmail(),$bodegaCargada->getTelefono(),$bodegaCargada->getContacto(),$bodegaCargada->getFundacion(),$bodegaCargada->getRestaurante(),$bodegaCargada->getHotel(),$_GET["ver"]];
 
             $vino = new Vino();
             $vinos = $vino->cargarVinos();
 
-            $this->bodegaView($vinos, $bodegaArray);
+            $this->bodegaView($vinos, $bodegaCargada);
         }
 
         public function nueva()

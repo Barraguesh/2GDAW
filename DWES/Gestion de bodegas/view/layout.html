@@ -40,18 +40,11 @@
         </nav>
         <div class="container" style="margin-top: 5%;">
             <header>
-                <h1>Panel de gestion</h1>
+                <h1>{% block titulo %}{% endblock %}</h1>
             </header>
             <div class="mt-5">
-                <div class="row mb-1 ml-1">
-                    <form action='index.php' method='get'>
-                        <button class='btn btn-primary' name='action' value='nuevaBodegaView'>Nueva bodega</button>
-                    </form>
-                </div>
-                <div class="row">
-                    {% block content %}
-                    {% endblock %}
-                </div>
+                {% block content %}
+                {% endblock %}
             </div>
     </body>
 
