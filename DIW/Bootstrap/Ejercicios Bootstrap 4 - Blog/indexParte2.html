@@ -9,32 +9,146 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     </head>
 
-    <body class="container-fluid">
-        <nav class="navbar" style="background-color: black; color:white;">
-            <h1>Barra de navegacion</h1>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#">Blog</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigationContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navigationContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <button style="border:none; background-color: #343a40; color: white;" class="nav-link">Inicio<span
+                                class="sr-only">(current)</span></button>
+                    </li>
+                </ul>
+            </div>
         </nav>
-        <section class="jumbotron" style="background-color: lightskyblue;">
-            <h1>Ejemplo blog con bootstrap</h1>
+
+        <section class="jumbotron" style="background-color: lightskyblue; color: white; border-radius: 0px;">
+            <h1>Demo blog</h1>
+            <p>Ejemplo blog con bootstrap</p>
         </section>
-        <section class="main container section" style="background-color: pink;">
+        <section class="main container-fluid">
             <div class="row">
-                <section class="col-md-9">
-                    <article style="background-color: green;">
-                        <h1>Artículo #1</h1>
+                <section class="posts col-md-9">
+                    <article class="post clearfix container-fluid mb-3">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="img/img1.jpg" class="img-fluid img-thumbnail">
+                            </div>
+                            <div class="col-md-7">
+                                <a class="thumb" href="#" style="text-decoration: none;">
+                                    <h2 class="post-title">Artículo #1</h2>
+                                </a>
+                                <p><span class="post-fecha">15 de Enero de 2019</span><span class="post-autor"> por
+                                        Daniel
+                                        Barragues</span></p>
+                                <p class="contenido text-justify mb-3">"Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing
+                                    elit,
+                                    sed
+                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                    veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+                                <div class="contenedor-botones">
+                                    <a class="btn btn-primary" href="#">Leer más</a>
+                                    <a class="btn btn-info" href="#"><span class="badge badge-light badge-pill">10</span>
+                                        Comentarios</a>
+                                </div>
+                            </div>
+                        </div>
                     </article>
-                    <article style="background-color: green;">
-                        <h1>Artículo #2</h1>
+
+                    <article class="post clearfix container-fluid">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="img/img1.jpg" class="img-fluid img-thumbnail">
+                            </div>
+                            <div class="col-md-7">
+                                <a class="thumb" href="#" style="text-decoration: none;">
+                                    <h2 class="post-title">Artículo #2</h2>
+                                </a>
+                                <p><span class="post-fecha">14 de Enero de 2019</span><span class="post-autor"> por
+                                        Daniel
+                                        Barragues</span></p>
+                                <p class="contenido text-justify mb-3">"Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing
+                                    elit,
+                                    sed
+                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                    veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+                                <div class="contenedor-botones">
+                                    <a class="btn btn-primary" href="#">Leer más</a>
+                                    <a class="btn btn-info" href="#"><span class="badge badge-light badge-pill">10</span>
+                                        Comentarios</a>
+                                </div>
+                            </div>
+                        </div>
                     </article>
-                    <article style="background-color: green;">
-                        <h1>Artículo #3</h1>
-                    </article>
-                    <nav class="pagination" style="background-color: yellow;"><h3>Paginación</h3></nav>
+
+                    <nav class="col-12 mt-5">
+                        <ul class="pagination" style="justify-content: center;">
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        </ul>
+                    </nav>
                 </section>
-                <aside class="aside col-md-3 d-md-inline d-none" style="background-color: red;"><h1>aside</h1></aside>
+                <aside class="main container-fluid aside col-md-3 d-md-inline d-none">
+                    <div class="row">
+                        <h4>Categorías</h4>
+                    </div>
+                    <div class="row">
+                        <div class="list-group col-8">
+                            <a href="#" class="list-group-item active">First item</a>
+                            <a href="#" class="list-group-item">Second item</a>
+                            <a href="#" class="list-group-item">Third item</a>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <h4>Artículos recientes</h4>
+                    </div>
+                    <div class="row">
+                        <div class="list-group col-8 mb-5">
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">Lorem ipsum</h4>
+                                <p class="list-group-item-text" style="color: black;">Lorem ipsum dolor sit amet,
+                                    consectetur
+                                    adipiscing elit</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">Lorem ipsum</h4>
+                                <p class="list-group-item-text" style="color: black;">Lorem ipsum dolor sit amet,
+                                    consectetur
+                                    adipiscing elit</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">Lorem ipsum</h4>
+                                <p class="list-group-item-text" style="color: black;">Lorem ipsum dolor sit amet,
+                                    consectetur
+                                    adipiscing elit</p>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
             </div>
         </section>
-        <footer class="footer row" style="background-color: gray;">footer</footer>
-
+        <footer class="footer container-fluid">
+            <div class="row">
+                <div class="container-fluid col-5 offset-1">Autores</div>
+                <div class="container-fluid col-4 ml-1">
+                    <ul class="list-inline text-right">
+                        <li class="list-inline-item"><a href="#">Daniel</a></li>
+                        <li class="list-inline-item"><a href="#">Lorem</a></li>
+                        <li class="list-inline-item"><a href="#">Ipsum</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
 
         <script src="js/jquery.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
