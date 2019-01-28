@@ -121,58 +121,117 @@
   ================================================== -->
     <!-- Inserta el resto de la página en un contenedor para que aparezca centrado, es decir, añade al contenedor de abajo la clase Bootstrap para centrar todo -->
 
+    <div class="container">
+      <div class="marketing" id="servicios">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 text-center">
+            <img src="img/alpes.jpeg" alt="alpes" width="250" height="250" class="img-responsive img-circle offset-2">
+            <h2>
+              <p>Alpes</p>
+            </h2>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat."</p>
+            <input type="button" href="" class="btn btn-primary" value="View details"></a>
+          </div>
 
-    <div class="marketing" id="servicios">
-      <div class="row">
-        <div class="col-xs-12 col-sm-4 text-center">
-          <img src="" alt="" width="250" height="250" class="img-responsive img-circle">
-          <h2>
-            <p></p>
-          </h2>
-          <input type="button" href="" class="btn btn-primary"></a>
+          <div class="col-xs-12 col-sm-4 text-center">
+            <img src="img/nepal.jpg" alt="alpes" width="250" height="250" class="img-responsive img-circle offset-2">
+            <h2>
+              <p>Nepal</p>
+            </h2>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat."</p>
+            <input type="button" href="" class="btn btn-primary" value="View details"></a>
+          </div>
+
+          <div class="col-xs-12 col-sm-4 text-center">
+            <img src="img/pirineos.jpg" alt="alpes" width="250" height="250" class="img-responsive img-circle offset-2">
+            <h2>
+              <p>Pirineos</p>
+            </h2>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat."</p>
+            <input type="button" href="" class="btn btn-primary" value="View details"></a>
+          </div>
+        </div>
+        <!-- Una fila que se divide en 3 columnas iguales para md. Las imagenes tienen una clase img-circle y una anchura y altura de 250 -->
+
+        <hr class="featurette-divider">
+
+        <div class="row">
+          <div class="col-8">
+            <h2>Lorem Ipsum dolor.</h2>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum."</p>
+          </div>
+          <img class="img-thumbnail col-3" src="img/guia1.jpg">
+        </div>
+        <!--Contenedor para bloque 1 de nosotros. La imagen debe ser de tipo enlace con clase thumb y flotado derecha. La imagen, en cambio, debe tener un borde-->
+
+        <hr class="featurette-divider">
+
+
+        <!--Contenedor para bloque 2 de nosotros. La imagen debe ser de tipo enlace con clase thumb y flotado izquierda. La imagen, en cambio, debe tener un borde-->
+        <div class="row">
+          <img class="img-thumbnail col-3" src="img/guia2.jpg">
+          <div class="col-8">
+            <h2>Lorem Ipsum dolor.</h2>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum."</p>
+          </div>
         </div>
 
-        <div class="col-xs-12 col-sm-4 text-center">
-          <img src="" alt="" class="img-responsive img-circle">
-          <h2>
-            <p></p>
-          </h2>
-          <input type="button" href="" class="btn btn-primary"></a>
+        <hr class="featurette-divider">
+
+        <!--Contenedor para bloque 2 de nosotros. La imagen debe ser de tipo enlace con clase thumb y flotado derecha. La imagen, en cambio, debe tener un borde-->
+        <div class="row">
+          <div class="col-8">
+            <h2>Lorem Ipsum dolor.</h2>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum."</p>
+          </div>
+          <img class="img-thumbnail col-3" src="img/guia3.jpg">
         </div>
 
-        <div class="col-xs-12 col-sm-4 text-center">
-          <img src="" alt="" class="img-responsive img-circle">
-          <h2>
-            <p></p>
-          </h2>
-          <input type="button" href="" class="btn btn-primary"></a>
-        </div>
+        <hr class="featurette-divider">
+
+        <!--Formulario horizontal-->
+        <form class="d-flex align-items-center flex-column">
+          <div class="form-group row">
+            <label for="exampleInputName1" class="mr-4 mt-2 col-2"><strong>Nombre</strong></label>
+            <div class="col-9">
+              <input type="text" class="form-control" id="exampleInputName1">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="exampleInputEmail1" class="mr-4 mt-2 col-2"><strong>Email</strong></label>
+            <div class="col-9">
+              <input type="email" class="form-control" id="exampleInputEmail1">
+            </div>
+          </div>
+          <div class="form-group row">
+            <textarea class="form-control offset-1 col-12" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
       </div>
-      <!-- Una fila que se divide en 3 columnas iguales para md. Las imagenes tienen una clase img-circle y una anchura y altura de 250 -->
-
-      <hr class="featurette-divider">
-
-      <div class="">
-
-      </div>
-      <!--Contenedor para bloque 1 de nosotros. La imagen debe ser de tipo enlace con clase thumb y flotado derecha. La imagen, en cambio, debe tener un borde-->
-
-      <hr class="featurette-divider">
-
-      <!--Contenedor para bloque 2 de nosotros. La imagen debe ser de tipo enlace con clase thumb y flotado izquierda. La imagen, en cambio, debe tener un borde-->
-
-      <hr class="featurette-divider">
-
-      <!--Contenedor para bloque 2 de nosotros. La imagen debe ser de tipo enlace con clase thumb y flotado derecha. La imagen, en cambio, debe tener un borde-->
-
-      <hr class="featurette-divider">
-
-      <!--Formulario horizontal-->
-
 
       <!-- FOOTER -->
       <footer>
-        <p class=""><a href="#">Back to top</a></p>
+        <p class="float-right"><a href="#">Back to top</a></p>
         <p>&copy; 2015 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
 
