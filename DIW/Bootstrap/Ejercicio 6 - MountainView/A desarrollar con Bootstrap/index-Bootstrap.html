@@ -27,9 +27,9 @@
   <body>
     <!-- NAVBAR
 	================================================== -->
-    <div class="navbar-wrapper offset-1 col-10">
+    <div class="navbar-wrapper offset-sm-1 col-sm-10">
       <!-- Añade aquí la barra de navegación. Debe ir centrada-->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <img class="pl-4" height="20" src="img/logo.png">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,7 +54,7 @@
 
     <!-- CAROUSEL
   ================================================== -->
-    <div id="carousel" class="carousel slide" data-ride="carousel">
+    <div id="carousel" class="carousel slide d-sm-block d-none" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carousel" data-slide-to="0" class="active"></li>
         <li data-target="#carousel" data-slide-to="1"></li>
@@ -63,8 +63,8 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="d-block w-100" src="img/1.jpg" alt="First slide">
-          <div class="carousel-caption d-none d-md-block">
+          <img src="img/1.jpg" alt="First slide">
+          <div class="carousel-caption d-none d-sm-block">
             <h5>Lorem 1</h5>
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
@@ -75,7 +75,7 @@
         </div>
         <div class="carousel-item">
           <img class="d-block w-100" src="img/2.jpg" alt="Second slide">
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption d-none d-sm-block">
             <h5>Lorem 2</h5>
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
@@ -86,7 +86,7 @@
         </div>
         <div class="carousel-item">
           <img class="d-block w-100" src="img/3.jpg" alt="Third slide">
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption d-none d-sm-block">
             <h5>Lorem 3</h5>
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
@@ -97,7 +97,7 @@
         </div>
         <div class="carousel-item">
           <img class="d-block w-100" src="img/4.jpg" alt="Fourth slide">
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption d-none d-sm-block">
             <h5>Lorem 4</h5>
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
@@ -121,11 +121,11 @@
   ================================================== -->
     <!-- Inserta el resto de la página en un contenedor para que aparezca centrado, es decir, añade al contenedor de abajo la clase Bootstrap para centrar todo -->
 
-    <div class="container">
-      <div class="marketing" id="servicios">
+    <div class="container mt-5 mt-sm-2">
+      <div class="marketing mt-5 mt-sm-2" id="servicios">
         <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-4 mb-sm-4 text-center">
-            <img src="img/alpes.jpeg" alt="alpes" width="250" height="250" class="img-responsive img-circle offset-md-2 offset-sm-3">
+          <div class="col-xs-12 col-sm-12 col-md-4 mb-4 text-center">
+            <img src="img/alpes.jpeg" alt="alpes" width="250" height="250" class="img-circle">
             <h2>
               <p>Alpes</p>
             </h2>
@@ -135,8 +135,8 @@
             <input type="button" href="" class="btn btn-primary" value="View details"></a>
           </div>
 
-          <div class="col-xs-12 col-sm-12 col-md-4 mb-sm-4 text-center">
-            <img src="img/nepal.jpg" alt="alpes" width="250" height="250" class="img-responsive img-circle offset-md-2 offset-sm-3">
+          <div class="col-xs-12 col-sm-12 col-md-4 mb-4 text-center">
+            <img src="img/nepal.jpg" alt="alpes" width="250" height="250" class="img-circle">
             <h2>
               <p>Nepal</p>
             </h2>
@@ -146,8 +146,8 @@
             <input type="button" href="" class="btn btn-primary" value="View details"></a>
           </div>
 
-          <div class="col-xs-12 col-sm-12 col-md-4 mb-sm-4 text-center">
-            <img src="img/pirineos.jpg" alt="alpes" width="250" height="250" class="img-responsive img-circle offset-md-2 offset-sm-3">
+          <div class="col-xs-12 col-sm-12 col-md-4 text-center">
+            <img src="img/pirineos.jpg" alt="alpes" width="250" height="250" class="img-circle">
             <h2>
               <p>Pirineos</p>
             </h2>
@@ -161,49 +161,38 @@
 
         <hr class="featurette-divider">
 
-        <div class="row">
-          <div class="col-md-8">
-            <h2>Lorem Ipsum dolor.</h2>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum."</p>
-          </div>
-          <img class="img-thumbnail col-md-3" src="img/guia1.jpg">
-        </div>
+        <a class="thumb rounded float-right"><img class="img-thumbnail" src="img/guia1.jpg"></a>
+        <h2>Lorem Ipsum dolor.</h2>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+          mollit anim id est laborum."</p>
+
         <!--Contenedor para bloque 1 de nosotros. La imagen debe ser de tipo enlace con clase thumb y flotado derecha. La imagen, en cambio, debe tener un borde-->
 
         <hr class="featurette-divider">
 
 
         <!--Contenedor para bloque 2 de nosotros. La imagen debe ser de tipo enlace con clase thumb y flotado izquierda. La imagen, en cambio, debe tener un borde-->
-        <div class="row">
-          <img class="img-thumbnail col-3" src="img/guia2.jpg">
-          <div class="col-8">
-            <h2>Lorem Ipsum dolor.</h2>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum."</p>
-          </div>
-        </div>
+        <a class="thumb rounded float-left"><img class="img-thumbnail" src="img/guia2.jpg"></a>
+        <h2>Lorem Ipsum dolor.</h2>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+          mollit anim id est laborum."</p>
 
         <hr class="featurette-divider">
 
         <!--Contenedor para bloque 2 de nosotros. La imagen debe ser de tipo enlace con clase thumb y flotado derecha. La imagen, en cambio, debe tener un borde-->
-        <div class="row">
-          <div class="col-8">
-            <h2>Lorem Ipsum dolor.</h2>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum."</p>
-          </div>
-          <img class="img-thumbnail col-3" src="img/guia3.jpg">
-        </div>
+        <a class="thumb rounded float-right"><img class="img-thumbnail" src="img/guia3.jpg"></a>
+        <h2>Lorem Ipsum dolor.</h2>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+          mollit anim id est laborum."</p>
 
         <hr class="featurette-divider">
 
