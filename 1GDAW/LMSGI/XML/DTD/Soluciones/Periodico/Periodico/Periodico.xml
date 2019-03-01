@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE periodico SYSTEM "Periodico.dtd">
+<periodico>
+	<cabecera>
+		<nombre></nombre>
+		<fecha></fecha>
+		<lugar></lugar>
+		<numero></numero>
+		<precio></precio>
+	</cabecera>
+	<portada>
+		<titular></titular>
+		<noticia>
+			<titulo></titulo>
+			<subtitulo></subtitulo>
+			<entradilla></entradilla>
+			<cuerpo></cuerpo>
+		</noticia>
+	</portada>
+	<seccion tipo="">
+		<noticia>
+			<titulo></titulo>
+			<subtitulo></subtitulo>
+			<entradilla></entradilla>
+			<cuerpo></cuerpo>
+		</noticia>
+	</seccion>
+	<contraportada/>
+</periodico>

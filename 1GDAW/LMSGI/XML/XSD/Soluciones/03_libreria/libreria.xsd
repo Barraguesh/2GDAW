@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="libreria" type="tipo_libreria"/>
+
+  <xs:complexType name="tipo_libreria">
+    <xs:sequence>
+      <xs:element name="libro" type="tipo_libro"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tipo_libro">
+    <xs:sequence>
+      <xs:element name="titulo" type="restriccion_titulo"/>
+      <xs:element name="autor" type="xs:string" maxOccurs="2"/>
+      <xs:element name="editorial" type="xs:string"/>
+      <xs:element name="isbn" type="restriccion_isbn"/>
+    </xs:sequence>
+    <xs:attribute name="categoria" type="restriccion_categoria" use="required"/>
+  </xs:complexType>
+
+  <xs:simpleType name="restriccion_titulo">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="32"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="restriccion_isbn">
+    <xs:restriction base="xs:string">
+      <xs:length value="13"/>
+      <xs:pattern value="\d{2}-\d{3}-\d{4}-\d{1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="restriccion_categoria">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Biografia"/>
+      <xs:enumeration value="Ensayo"/>
+      <xs:enumeration value="Ficcion"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

@@ -1,0 +1,6 @@
+<!DOCTYPE libreria SYSTEM "libreria.dtd">
+        <!ELEMENT libreria (nombreLibro,fecha)*>
+        <!ELEMENT nombreLibro (#PCDATA)>
+        <!ELEMENT fecha (#PCDATA)>
+
+<!ATTLIST  fecha ID CDATA #REQUIRED>

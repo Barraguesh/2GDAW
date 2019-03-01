@@ -1,0 +1,31 @@
+<!ELEMENT universidad (alumnos, profesores, asignaturas)+>
+
+    <!ELEMENT alumnos (alumno)+>
+        <!ELEMENT alumno (datos, matricula+)>
+            <!ELEMENT matricula (asignatura, nota)>
+            <!ELEMENT nota EMPTY>
+
+    <!ELEMENT profesores (profesor)+>
+        <!ELEMENT profesor (datos, despacho, horariosTutorias+, asignatura+)>
+            <!ELEMENT despacho (#PCDATA)>
+            <!ELEMENT horariosTutorias (#PCDATA)>
+
+    <!ELEMENT asignaturas (asignatura)+>
+        <!ELEMENT asignatura (creditos, carrera)>
+            <!ATTLIST asignatura
+                    codigo ID #REQUIRED>
+            <!ELEMENT creditos (#PCDATA)>
+            <!ELEMENT carrera (#PCDATA)>
+
+    <!ELEMENT datos (dni|pasaporte, nombreCompleto, fechNac, infoContacto*)>
+        <!ELEMENT dni EMPTY>
+            <!ATTLIST dni ID #REQUIRED>
+        <!ELEMENT pasaporte (paisProcedencia)>
+            <!ELEMENT paisProcedencia (#PCDATA)>
+            <!ATTLIST pasaporte
+                        cod ID #REQUIRED>
+        <!ELEMENT nombreCompleto (#PCDATA)>
+        <!ELEMENT fechNac (#PCDATA)>
+        <!ELEMENT infoContacto (#PCDATA)>
+            <!ATTLIST infoContacto
+                    tipo (correo|mail|telefono) #REQUIRED>

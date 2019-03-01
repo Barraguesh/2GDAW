@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<agenda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="agenda.xsd">
+
+    <contacto>
+        <Nombre>Marcos</Nombre>
+        <Direccion>Hurtado de Amezaga</Direccion>
+        <Ciudad>Bilbao</Ciudad>
+        <Provincia>Bizkaia</Provincia>
+        <Codigo_Postal>48008</Codigo_Postal>
+        <Numeros>
+            <Telefono>944305879</Telefono>
+            <Fax>945781122</Fax>
+        </Numeros>
+        <Email>mgarciadegodos@egibide.org</Email>
+        <Web>www.egibide.org</Web>
+        <Compania>Egibide</Compania>
+    </contacto>
+</agenda>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="restriccion_identificador">
+        <xs:restriction base="xs:ID">
+            <xs:pattern value="(([a-zA-Z][a-z]*))"/>
+            <xs:maxLength value="8"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="restriccion_relacion">
+        <xs:restriction base="xs:IDREF"> <!--Es como una foreing key en BD.-->
+            <xs:pattern value="([a-zA-Z][a-z]*)"/>
+            <xs:maxLength value="8"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="restriccion_sexo"><!--Tipo para definir enumerados-->
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="hombre"/>
+            <xs:enumeration value="mujer"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="listin" type="tipo_listin"/>
+
+    <xs:complexType name="tipo_listin">
+        <xs:sequence>
+            <xs:element name="contacto" minOccurs="1" maxOccurs="unbounded" type="tipo_contacto"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="tipo_contacto">
+        <xs:sequence>
+            <xs:element name="nombre" maxOccurs="1" minOccurs="1" type="xs:string"/>
+            <xs:element name="email" maxOccurs="2" minOccurs="0" type="xs:string"/>
+            <xs:element name="relacion" maxOccurs="1" minOccurs="0" type="tipo_relacion"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="restriccion_identificador" use="required"/>
+        <xs:attribute name="sexo" type="restriccion_sexo" use="optional"/><!--Aquí usamos el tipo con la restricción de enumerados-->
+    </xs:complexType>
+
+    <xs:complexType name="tipo_relacion">
+        <xs:attribute name="amigo_de" type="restriccion_relacion"/>
+        <xs:attribute name="enemigo_de" type="restriccion_relacion"/>
+    </xs:complexType>
+
+</xs:schema>

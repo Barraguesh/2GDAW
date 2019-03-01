@@ -1,0 +1,11 @@
+<!ELEMENT ticket (evento, fecha, hora, nivel, seccion, IDventa, apellidos, nombre, edad, precio)>
+    <!ELEMENT evento (#PCDATA)>
+    <!ELEMENT fecha (#PCDATA)>
+    <!ELEMENT hora (#PCDATA)>
+    <!ELEMENT nivel (#PCDATA)>
+    <!ELEMENT seccion (#PCDATA)>
+    <!ELEMENT apellidos (#PCDATA)>
+    <!ELEMENT IDventa (#PCDATA)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT edad (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>

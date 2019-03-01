@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<equipo>
+    <unidad id="C">
+        <directorio>
+            <nombre>Users</nombre>
+            <fecha_modif>19/09/2016</fecha_modif>
+            <directorio>
+                <nombre>Marcos</nombre>
+                <fecha_modif>19/09/2016</fecha_modif>
+                <fichero>
+                    <nombre>horario</nombre>
+                    <fecha_modif>10/09/2016</fecha_modif>
+                    <tamanyo unidad="byte">15</tamanyo>
+                </fichero>
+                <fichero>
+                    <nombre>Listado alumnos practicas</nombre>
+                    <fecha_modif>19/09/2016</fecha_modif>
+                    <tamanyo unidad="byte">73,5</tamanyo>
+                </fichero>
+                <directorio>
+                    <nombre>Pruebas</nombre>
+                    <fecha_modif>05/09/2016</fecha_modif>
+                </directorio>
+            </directorio>
+        </directorio>
+        <directorio>
+            <nombre>Windows</nombre>
+            <fecha_modif>07/08/2016</fecha_modif>
+            <fichero>
+                <nombre>autoexec</nombre>
+                <fecha_modif>07/08/2016</fecha_modif>
+                <tamanyo unidad="byte">36,7</tamanyo>
+            </fichero>
+        </directorio>
+    </unidad>
+    <unidad id="F">
+        <directorio>
+            <nombre>Backup</nombre>
+            <fecha_modif>05/06/2016</fecha_modif>
+            <fichero>
+                <nombre>reginfo</nombre>
+                <fecha_modif>15/05/2016</fecha_modif>
+                <tamanyo unidad="byte">36,7</tamanyo>
+            </fichero>
+            <directorio>
+                <nombre>Aplicaciones</nombre>
+                <fecha_modif>15/05/2016</fecha_modif>
+                <fichero>
+                    <nombre>Delphi</nombre>
+                    <fecha_modif>15/05/2016</fecha_modif>
+                    <tamanyo unidad="byte">3500</tamanyo>
+                </fichero>
+                <fichero>
+                    <nombre>Visual Studio</nombre>
+                    <fecha_modif>10/04/2016</fecha_modif>
+                    <tamanyo unidad="byte">5820</tamanyo>
+                </fichero>
+                <directorio>
+                    <nombre>Programas</nombre>
+                    <fecha_modif>05/05/2016</fecha_modif>
+                    <fichero>
+                        <nombre>Agenda</nombre>
+                        <fecha_modif>05/05/2016</fecha_modif>
+                        <tamanyo unidad="byte">720</tamanyo>
+                    </fichero>
+                </directorio>
+            </directorio>
+        </directorio>
+    </unidad>
+    <unidad id="K">
+        <directorio>
+            <nombre/>
+            <fecha_modif/>
+        </directorio>
+    </unidad>
+</equipo>

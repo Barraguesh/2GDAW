@@ -1,0 +1,9 @@
+<!ELEMENT compras (fecha, cliente, pedido, direcciones)>
+    <!ELEMENT fecha (#PCDATA)>
+    <!ELEMENT cliente (#PCDATA)>
+    <!ELEMENT pedido (cantidad, precio)+>
+        <!ELEMENT cantidad (#PCDATA)>
+        <!ELEMENT precio (#PCDATA)>
+    <!ELEMENT direcciones (CP,direccion)>
+        <!ELEMENT CP (#PCDATA)>
+        <!ELEMENT direccion (#PCDATA)>

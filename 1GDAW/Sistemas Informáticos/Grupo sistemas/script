@@ -1,0 +1,24 @@
+#Script Linux SI
+clear
+echo Script Linux sistemas
+if  test -f fichero1 then
+	echo El fichero1 ya existe
+else
+	touch fichero1
+	echo Fichero1 creado
+fi
+mkdir dir1
+mkdir dir4
+touch $HOME/Test/dir1/fichero3
+mkdir $HOME/Test/dir1/dir2
+touch $HOME/dir1/dir2/fichero4
+ls $HOME//Test/dir1/dir2
+ls $HOME/Test/dir1/dir2
+ls -l
+pwd
+ls -a
+cd $HOME/Test/dir1
+rm -r $HOME/Test/dir1/dir2
+mv $HOME/Test/dir1 $HOME/Test/dir_uno
+grep f
+touch vacio

@@ -1,0 +1,38 @@
+body {
+    background-image: url("Imagenes/Abierto.png");
+    background-size: 100%;
+    margin:0;
+    padding:0;
+    background-attachment: fixed;
+    text-align: center;
+}
+h2, p{
+    font-family: Verdana;
+    text-align: left;
+}
+p{
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 10px;
+}
+.textbox{
+    display: inline-block;
+    background-color: white;
+    width: 75%;
+    height: 100%;
+    padding: 10px;
+    border: 0;
+    margin: 0;
+    overflow: hidden;
+    margin: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.close{
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+}
+.img{
+    width: 80%;
+    height: 45%;
+}

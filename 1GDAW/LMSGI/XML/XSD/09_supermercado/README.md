@@ -1,0 +1,34 @@
+# Ejercicio 9 - Supermercado
+
+Crea un documento XSD asociado al siguiente documento XML de forma que sea válido:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<supermercado>
+  <articulo id="articulo1">
+    <descripcion>Leche desntada</descripcion>
+    <marca>Pascual</marca>
+    <medida>1 L</medida>
+    <seccion>Leche y Batidos</seccion>
+  </articulo>
+  <articulo id="articulo2">
+    <descripcion>Leche entera</descripcion>
+    <marca>Puleva</marca>
+    <medida>1,5 L</medida>
+    <seccion>Leche y Batidos</seccion>
+    <oferta>Lote descuento</oferta>
+    <oferta>Dos por uno</oferta>
+    <perecedero>
+      <fabricacion>Enero2010</fabricacion>
+    </perecedero>
+  </articulo>
+  <articulo id="articulo3">
+    <descripcion>Tomate</descripcion>
+    <medida>1 Kg</medida>
+    <seccion>Frutas y verduras</seccion>
+    <perecedero>
+      <caducidad>Febrero2010</caducidad>
+    </perecedero>
+  </articulo>
+</supermercado>
+```

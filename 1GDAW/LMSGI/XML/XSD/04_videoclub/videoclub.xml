@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE videoclub [
+        <!ELEMENT videoclub (#PCDATA)>
+        <!ATTLIST videoclub
+                xmlns:xsi CDATA #REQUIRED
+                xsi:noNamespaceSchemaLocation CDATA #REQUIRED>
+        ]>
+<videoclub xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="videoclub.xsd">
+</videoclub>

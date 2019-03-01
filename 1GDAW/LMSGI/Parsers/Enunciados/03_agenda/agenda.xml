@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agenda>
+    <contacto>
+        <nombre>Ivan</nombre>
+        <apellidos>Tejada</apellidos>
+        <email>ivan@jemail.com</email>
+        <telefono>655655655</telefono>
+    </contacto>
+    <contacto>
+        <nombre>Marcos</nombre>
+        <apellidos>Garcia de Godos</apellidos>
+        <email>mgarciadegodos@egibide.org</email>
+        <telefono>652453214</telefono>
+    </contacto>
+    <contacto>
+        <nombre>Laura</nombre>
+        <apellidos>Navarro Garces</apellidos>
+        <email>lnavarro@egibide.org</email>
+        <telefono>658475214</telefono>
+    </contacto>
+</agenda>

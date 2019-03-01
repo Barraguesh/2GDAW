@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE ticket SYSTEM "Ejercicio1.dtd">-->
+<ticket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Ejercicio1.xsd">
+    <eventototal id="561565">
+        <evento>Jackson Hole Rodeo</evento>
+        <fecha>8/7/2013</fecha>
+        <hora>8:00PM</hora>
+        <nivel>Covered</nivel>
+        <seccion>General Admission</seccion>
+        <apellidos>Sarasola</apellidos>
+        <nombre>Ion</nombre>
+        <edad>Adulto</edad>
+        <precio>25$</precio>
+    </eventototal>
+</ticket>

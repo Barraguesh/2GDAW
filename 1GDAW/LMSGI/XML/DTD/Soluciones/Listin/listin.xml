@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE listin SYSTEM "listin.dtd">
+<listin>
+    <persona id="mgarciad" sexo="hombre">
+        <nombre>Marcos</nombre>
+        <email>mgarciadegodos@egibide.org</email>
+        <relacion enemigo_de="earbailz" amigo_de="mgarciad"/>
+    </persona>
+    <persona id="earbailz" sexo="mujer">
+        <nombre>Eider</nombre>
+        <email>earbailza@egibide.org</email>
+        <relacion amigo_de="mgarciad"/>
+    </persona>
+</listin>

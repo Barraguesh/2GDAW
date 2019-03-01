@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+
+<libreria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="libreria.dtd">
+        <nombreLibro>Ciudad</nombreLibro>
+        <fecha ID="ACTUAL">2013-08-01</fecha>
+</libreria>

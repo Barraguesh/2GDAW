@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!--
+        TrackingUpdateResponse.dtd
+        Copyright (C) 2014, Shipwire Inc. All rights reserved.
+        Last modified: 2014-05-04
+        -->
+        <!ELEMENT TrackingUpdateResponse (Status, Order*,
+                TotalOrders, TotalShippedOrders, TotalProducts,
+                ResultsLimit?, ResultsOffset?,
+                Bookmark?, ProcessingTime?)>
+        <!ELEMENT Status (#PCDATA)>
+        <!ELEMENT Order (TrackingNumber*, Holds?, Items?, RelatedOrder*)>
+        <!ATTLIST Order
+                id CDATA #REQUIRED
+                shipwireId CDATA #REQUIRED
+                internalId CDATA #REQUIRED
+                warehouse CDATA #IMPLIED
+                shipped (YES|NO) #REQUIRED
+                shipper CDATA #IMPLIED
+                shipperFullName CDATA #IMPLIED
+                shipDate CDATA #IMPLIED
+                cancelDate CDATA #IMPLIED
+                delivered (YES|NO|UNKNOWN) #IMPLIED
+                expectedDeliveryDate CDATA #IMPLIED
+                handling CDATA #IMPLIED
+                shipping CDATA #IMPLIED
+                packaging CDATA #IMPLIED
+                insurance CDATA #IMPLIED
+                total CDATA #IMPLIED
+                returned (YES|NO) #REQUIRED
+                returnDate CDATA #IMPLIED
+                returnCondition (GOOD|BAD|MIXED) #IMPLIED
+                href CDATA #IMPLIED
+                affiliateStatus (shipwireFulfilled|canceled|held|merchantFulfilled|duplicate) #IMPLIED
+                manuallyEdited (YES|NO) #IMPLIED
+                >
+        <!ELEMENT TrackingNumber (#PCDATA)>
+        <!ATTLIST TrackingNumber
+                carrier CDATA #REQUIRED
+                delivered (YES|NO|UNKNOWN) #IMPLIED
+                summary CDATA #IMPLIED
+                summaryDate CDATA #IMPLIED
+                deliveryDate CDATA #IMPLIED
+                href CDATA #IMPLIED
+                >
+        <!ELEMENT Holds (Hold*)>
+        <!ELEMENT Hold (Date, Type, Description)>
+        <!ELEMENT Date (#PCDATA)>
+        <!ELEMENT Type (#PCDATA)>
+        <!ELEMENT Description (#PCDATA)>
+        <!ELEMENT Items (Item*)>
+        <!ELEMENT Item (Code, Quantity, UnitValue?, ItemData*)>
+        <!ELEMENT Code (#PCDATA)>
+        <!ELEMENT Quantity (#PCDATA)>
+
+        <!ELEMENT UnitValue (#PCDATA)>
+        <!ATTLIST UnitValue
+                currency CDATA #IMPLIED
+                >
+        <!ELEMENT ItemData (#PCDATA)>
+        <!ATTLIST ItemData
+                type (serialNumber|lotNumber|other) #REQUIRED
+                >
+        <!ELEMENT RelatedOrder (TrackingNumber*)>
+        <!ATTLIST RelatedOrder
+                type (return|undershipment|overshipment|split|parent) #REQUIRED
+                shipwireId CDATA #REQUIRED
+                internalId CDATA #REQUIRED
+                >
+        <!ELEMENT TotalOrders (#PCDATA)>
+        <!ELEMENT TotalShippedOrders (#PCDATA)>
+        <!ELEMENT TotalProducts (#PCDATA)>
+        <!ELEMENT ResultsLimit (#PCDATA)>
+        <!ELEMENT ResultsOffset (#PCDATA)>
+        <!ELEMENT Bookmark (#PCDATA)>
+        <!ELEMENT ProcessingTime (#PCDATA)>
+        <!ATTLIST ProcessingTime
+                units CDATA #REQUIRED
+                >

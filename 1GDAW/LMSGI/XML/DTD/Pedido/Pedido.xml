@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE compras SYSTEM "Pedido.dtd">
+<compras>
+    <fecha></fecha>
+    <cliente></cliente>
+    <pedido>
+        <cantidad></cantidad>
+        <precio></precio>
+    </pedido>
+    <direcciones>
+        <CP></CP>
+        <direccion></direccion>
+    </direcciones>
+</compras>

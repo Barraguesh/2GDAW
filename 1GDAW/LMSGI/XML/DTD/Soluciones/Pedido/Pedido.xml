@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE pedido SYSTEM "Pedido.dtd">
+<pedido>
+    <fecha>
+        <dia>20</dia>
+        <mes>02</mes>
+        <anio>2012</anio>
+    </fecha>
+    <cliente>
+        <nombre>Ricardo</nombre>
+        <apellido>Molina</apellido>
+        <direccion>Avenida Gasteiz 56</direccion>
+        <ciudad>Vitoria</ciudad>
+        <cod_postal>01012</cod_postal>
+    </cliente>
+    <producto cod="_872-AA" nomb="cortadora">
+        <precio>148,95</precio>
+        <cantidad>1</cantidad>
+    </producto>
+    <producto cod="_926-FH" nomb="podadora">
+        <precio moneda="euro">7,98</precio>
+        <cantidad>3</cantidad>
+    </producto>
+    <envio>
+        <nombre>Ines</nombre>
+        <apellido>Abad</apellido>
+        <direccion>Plaza de la Duquesa 12</direccion>
+        <ciudad>Pamplona</ciudad>
+        <cod_postal>31010</cod_postal>
+    </envio>
+</pedido>

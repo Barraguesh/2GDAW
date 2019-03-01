@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="ticket" type="tipo_ticket">
+</xs:element>
+<xs:complexType name="tipo_ticket">
+    <xs:sequence>
+        <xs:element name="eventototal" type="tipo_eventototal"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipo_eventototal">
+    <xs:sequence>
+        <xs:element name="evento" type="xs:string"/>
+        <xs:element name="fecha" type="xs:string"/>
+        <xs:element name="hora" type="xs:string"/>
+        <xs:element name="nivel" type="xs:string"/>
+        <xs:element name="seccion" type="xs:string"/>
+        <xs:element name="apellidos" type="xs:string"/>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="edad" type="xs:string"/>
+        <xs:element name="precio" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:decimal" use="required"/>
+</xs:complexType>
+</xs:schema>

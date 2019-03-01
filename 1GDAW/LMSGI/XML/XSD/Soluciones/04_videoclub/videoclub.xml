@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<videoclub xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="videoclub.xsd">
+    <pelicula codigo="4587">
+        <titulo>Matrix</titulo>
+        <director>Wachowsky</director>
+        <actor>Keanu Reeves</actor>
+        <guion>dfafsdaf</guion>
+        <anyo>2011-11-11</anyo>
+    </pelicula>
+</videoclub>

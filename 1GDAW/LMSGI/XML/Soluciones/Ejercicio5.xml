@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pedido>
+    <fecha>
+		<dia>20</dia>
+		<mes>02</mes>
+		<anyo>2012</anyo>
+    </fecha>
+    <articulos>
+        <articulo nombre="cortadora">
+            <codigo_prod>
+                872-AA
+            </codigo_prod>
+            <precio moneda="euro">
+                148.95
+            </precio>
+            <cantidad>
+                1
+            </cantidad>
+        </articulo>
+        <articulo nombre="podadora">
+            <codigo_prod>
+                926-FH
+            </codigo_prod>
+            <precio moneda="euro">
+                7.98
+            </precio>
+            <cantidad>
+                3
+            </cantidad>
+        </articulo>
+    </articulos>
+    <cliente nombre="Ricardo Molina">
+        <factura>
+            <direccion>
+                <calle>
+                    Avda. Gasteiz 52
+                </calle>
+                <ciudad>
+                    vitoria
+                </ciudad>
+                <CP>
+                    01012
+                </CP>
+            </direccion>
+        </factura>
+        <entrega>
+            <direccion>
+                <calle>
+                    Plaza de la Duquesa 12,
+                </calle>
+                <ciudad>
+                    Pamplona
+                </ciudad>
+                <CP>
+                    31010
+                </CP>
+            </direccion>
+            <contacto>
+                Ines Abad
+            </contacto>
+        </entrega>
+    </cliente>
+</pedido>

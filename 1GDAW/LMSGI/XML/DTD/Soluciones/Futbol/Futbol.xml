@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE liga_futbol SYSTEM "dtdfutbolejercicio7.dtd">
+<liga_futbol>
+    <partido equipo_local="" goles_local="" equipo_visitante="" goles_visitante=""/>
+    <partido equipo_local="" goles_local="" equipo_visitante="" goles_visitante=""/>
+    <partido equipo_local="" goles_local="" equipo_visitante="" goles_visitante=""/>
+</liga_futbol>

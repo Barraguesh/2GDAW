@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<alumno dni="12345678M" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="alumno.xsd">
+    <nombre>Jon Olabarria</nombre>
+    <direccion>
+        <calle>Avenida de la Fuente</calle>
+        <numero>6</numero>
+        <ciudad>Vitoria</ciudad>
+        <provincia>Alava</provincia>
+    </direccion>
+    <telefono>944524873</telefono>
+</alumno>

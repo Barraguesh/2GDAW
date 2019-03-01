@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<en-export export-date="20151113T141846Z" application="Evernote" version="Evernote Mac 6.1.1 (452254)"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../XSD/simulacro_examen_ej2.xsd">>
+    <note>
+        <title>Multiplicidades de DTDs en XSDs</title>
+        <content>
+            <en-note> ... </en-note>
+        </content>
+        <created>20151023T200550Z</created>
+        <updated>20151024T112742Z</updated>
+        <tag>Scannable</tag>
+        <note-attributes>
+            <source>mobile.ios</source>
+            <source-application>scannable.ios</source-application>
+            <reminder-order>0</reminder-order>
+        </note-attributes>
+        <resource>
+            <data encoding="base64">JVBERi0xLjMKMSAwIG9iago8PC9UeXBlL0NhdGFsb2cvUGFnZXMgMyAwIFI+PgplbmRvYmoKMiAwIG9i
+                ago8PC9DcmVhdG9yKCk+PgplbmRvYmoKNiAwIG9iago8PC9UeXBlL1BhZ2UvUGFyZW50IDMgMCBSL1Jl
+                c291cmNlczw8L1Byb2NTZXQgWy9QREYgL0ltYWdlQiAvSW1hZ2VDXQovWE9iamVjdCA8PC9JbWFnZUJn
+                ciA1IDAgUiA+Pgo+Pi9Dcm9wQm94WzEwMC4wMDAwMDAgMTAwLjAwMDAwMCAyMTk2LjAwMDAwMCAyMDA0
+                LjAwMDAwMF0vTWVkaWFCb3hbMCAwIDIyOTYuMDAwMDAwIDIxMDQuMDAwMDAwXS9Sb3RhdGUgMCAvQ29u
+                dGVudHMgNCAwIFI+PgplbmRvYmoKNCAwIG9iago8PC9MZW5ndGggNyAwIFIgL1Jlc291cmNlczw8L1By
+                b2NTZXQgWy9QREZdCj4+L0ZpbHRlci9GbGF0ZURlY29kZT4+CnN0cmVhbQp4AXXdy25tO9Km535exbqB
+                ID4+CmVuZG9iagp4cmVmCjYgMQowMDAwMDMwNzQyIDAwMDAwIG4gCjkgMQowMDAwMDMwOTU4IDAwMDAw
+                IG4gCjEgMQowMDAwMDMxMDIzIDAwMDAwIG4gCnRyYWlsZXIKPDwgL0luZm8gMiAwIFIgL1Jvb3QgMSAw
+                IFIgL1NpemUgMTAgL1ByZXYgMzA0ODkgPj4Kc3RhcnR4cmVmCjMxMDkxCiUlRU9GCg==
+            </data>
+            <mime>application/pdf</mime>
+            <duration>0</duration>
+            <resource-attributes>
+                <timestamp>19700101T000000Z</timestamp>
+                <file-name>Multiplicidades .pdf</file-name>
+            </resource-attributes>
+        </resource>
+    </note>
+</en-export>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE agenda SYSTEM "agenda.dtd">
+<agenda>
+    <nombre>Marcos</nombre>
+    <direccion>Hurtado de Amezaga</direccion>
+    <ciudad>Bilbao</ciudad>
+    <provincia>Bizkaia</provincia>
+    <cod_postal>48008</cod_postal>
+    <numeros>
+        <telefono>344448578</telefono>
+        <fax>654521478</fax>
+    </numeros>
+    <email>mgarciadegodos@egibide.org</email>
+    <web>www.egibide.org</web>
+    <compania>Egibide</compania>
+</agenda>

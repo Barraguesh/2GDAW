@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Libro" type="tipo_libro"/>
+
+    <xs:complexType name="tipo_libro">
+        <xs:sequence>
+            <xs:element name="Titulo" type="xs:string"/>
+            <xs:element name="Contenido" type="tipo_contenido"/>
+            <xs:element name="Copyright" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="ISBN" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="tipo_contenido">
+        <!--Utilizamos las propiedades minOccurs y maxOccurs en la secuencia
+          para poder tener más de un conjunto (Capitulo, Separación)
+          y en cada conjunto pueda haber luego varios Capitulo y
+          cero o una Separacion-->
+        <xs:sequence minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="Capitulo" type="tipo_capitulo" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="Separacion" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipo_capitulo">
+        <xs:sequence>
+            <xs:element name="Tema" type="xs:string"/>
+            <xs:element name="Seccion" type="tipo_seccion" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="materia" type="restriccion_materia"/>
+    </xs:complexType>
+
+    <xs:complexType name="tipo_seccion">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="apartados" type="xs:string" use="required"/>
+                <xs:attribute name="dificil" type="xs:boolean" default="false"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="restriccion_materia">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="XML"/>
+            <xs:enumeration value="Java"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--Si nos ceñimos al enunciado tendríamos que utilizar esta restricción como type
+    del atributo "dificil" en lugar de usar un booleano:
+    <xs:simpleType name="restriccion_dificil">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="si"/>
+            <xs:enumeration value="no"/>
+        </xs:restriction>
+    </xs:simpleType>
+-->
+
+</xs:schema>

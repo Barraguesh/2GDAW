@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="empleados" type="tipo_empleados"/>
+
+  <xs:complexType name="tipo_empleados">
+    <xs:sequence>
+      <xs:element name="empleado" type="tipo_empleado" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tipo_empleado">
+    <xs:sequence>
+      <xs:element name="codigo" type="restriccion_codigo" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="datos" type="tipo_datos"/>
+      <xs:element name="comision" type="xs:double" minOccurs="0"/>
+      <xs:element name="director" type="xs:string"/>
+      <xs:element name="fecha_contratacion" type="xs:date"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="restriccion_codigo">
+    <xs:restriction base="xs:int">
+      <xs:pattern value="\d{3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="tipo_datos">
+    <xs:sequence>
+      <xs:element name="nombre" type="restriccion_nombre"/>
+      <xs:element name="apellido" type="restriccion_nombre" minOccurs="2" maxOccurs="unbounded"/>
+      <xs:element name="dni" type="restriccion_dni"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="restriccion_nombre">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="restriccion_dni">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{8}[a-zA-Z]"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

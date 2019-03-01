@@ -1,0 +1,3 @@
+# Ejercicio 2 - El tiempo de AEMET
+
+Construye un parser en NetBeans que sea capaz de analizar, extraer y mostrar en una aplicación las previsiones de lluvia y temperatura a 7 días para Vitoria-Gasteiz, usando los datos de la [previsión](http://www.aemet.es/es/eltiempo/prediccion/municipios/vitoria-gasteiz-id01059) que AEMET publica [en formato XML](http://www.aemet.es/xml/municipios/localidad_01059.xml).

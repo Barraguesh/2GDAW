@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<amazon>
+    <libro tipo="cuento" idioma="euskera">
+        <titulo>Dilintxo. Maitagarrien sekretua</titulo>
+        <editorial>Klasikoak, Aizkorri, Walt Disney Company</editorial>
+        <autor>
+            <nombre>Walt</nombre>
+            <apellidos>Disney</apellidos>
+        </autor>
+        <traductor>
+            <nombre>Idoia</nombre>
+            <apellidos>Hitzurun y Guillenea Mujika</apellidos>
+        </traductor>
+        <fecha>06/11/2012</fecha>
+        <precio moneda="euro">13,06</precio>
+        <stock unidades="1"/>
+        <!-- <stock>1</stock> -->
+        <formato tapa="blanda"/>
+        <envio_gratis>true</envio_gratis>
+        <!-- <envio gratis="true"/> -->
+        <mas_opciones>
+            <precio moneda="euro">13,06</precio>
+            <formato tapa="blanda"/>
+            <segunda_mano>false</segunda_mano>
+            <ofertas cantidad="3"/>
+        </mas_opciones>
+        <imagen>https://images-na.ssl-images-amazon.com/images/I/51L9GPgvJ7L._SX375_BO1,204,203,200_.jpg</imagen>
+        <!-- <imagen url="https://images-na.ssl-images-amazon.com/images/I/51bA%2BvvsRjL._SX325_BO1,204,203,200_.jpg"/> -->
+    </libro>
+    <libro tipo="novela" idioma="euskera">
+        <titulo>Bertan goxo</titulo>
+        <editorial>Ateko Bandan</editorial>
+        <autor>
+            <nombre>Karlos</nombre>
+            <apellidos>Linazasoro Izaguirre</apellidos>
+        </autor>
+        <precio moneda="euro">9,74</precio>
+        <stock unidades="4"/>
+        <!-- <stock>4</stock> -->
+        <formato tapa="blanda"/>
+        <envio_gratis>true</envio_gratis>
+        <mas_opciones>
+            <precio moneda="euro">9,74</precio>
+            <formato tapa="blanda"/>
+            <segunda_mano>false</segunda_mano>
+            <ofertas cantidad="2"/>
+        </mas_opciones>
+        <imagen>https://images-na.ssl-images-amazon.com/images/I/51bA%2BvvsRjL._SX325_BO1,204,203,200_.jpg</imagen>
+    </libro>
+</amazon>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="entrada" type="tipo_entrada"/>
+
+    <xs:complexType name="tipo_entrada">
+        <xs:sequence>
+            <xs:element name="info_compra" type="tipo_compra" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="info_ticket" type="tipo_ticket" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipo_compra">
+        <xs:sequence>
+            <xs:element name="identificador" type="tipo_identificador" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="apellidos" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipo_identificador">
+        <xs:attribute name="id" type="restriccion_id"/>
+    </xs:complexType>
+
+    <xs:simpleType name="restriccion_id">
+        <xs:restriction base="xs:ID">
+            <xs:pattern value="\d{6}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="tipo_ticket">
+        <xs:sequence>
+            <xs:element name="emisor" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="nombre_show" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="fecha" type="tipo_fecha" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="direccion" type="tipo_direccion" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="admision" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="localizacion" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="seccion" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="tipo_ticket" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="precio" type="tipo_precio" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="reembolsable" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="admite_cambio" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="codigo_barras" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="observacion" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipo_fecha">
+        <xs:attribute name="dia" type="xs:date"/>
+        <xs:attribute name="hora" type="xs:time"/>
+    </xs:complexType>
+
+    <xs:complexType name="tipo_direccion">
+        <xs:sequence>
+            <xs:element name="ciudad" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="lugar" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="calle" type="tipo_calle" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipo_calle">
+        <xs:attribute name="numero" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:complexType name="tipo_precio">
+        <xs:simpleContent>
+            <xs:extension base="xs:double">
+                <xs:attribute name="moneda" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<libreria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="libreria.xsd">
+    <libro categoria="Biografia">
+        <titulo>El señor de los anillos</titulo>
+        <autor>J.R.R. Tolkien</autor>
+        <editorial>Pascual</editorial>
+        <isbn>84-547-8794-2</isbn>
+    </libro>
+</libreria>

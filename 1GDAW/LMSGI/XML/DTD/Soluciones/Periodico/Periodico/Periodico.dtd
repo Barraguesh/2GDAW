@@ -1,0 +1,23 @@
+<!ELEMENT periodico (cabecera,portada,seccion+,contraportada)>
+
+	<!ELEMENT cabecera (nombre,fecha,lugar,numero,precio)>
+		<!ELEMENT nombre (#PCDATA)>
+		<!ELEMENT fecha (#PCDATA)>
+		<!ELEMENT lugar (#PCDATA)>
+		<!ELEMENT numero (#PCDATA)>
+		<!ELEMENT precio (#PCDATA)>
+
+	<!ELEMENT portada (titular,noticia+,publicidad*)>
+		<!ELEMENT titular (#PCDATA)>
+		<!ELEMENT publicidad (#PCDATA)>
+
+	<!ELEMENT seccion (noticia+)>
+	<!ATTLIST seccion tipo (internacional|opinion|nacional|cultura|deportes|tvradio) #REQUIRED>
+
+		<!ELEMENT noticia (titulo,subtitulo,entradilla,cuerpo)>
+			<!ELEMENT titulo (#PCDATA)>
+			<!ELEMENT subtitulo (#PCDATA)>
+			<!ELEMENT entradilla (#PCDATA)>
+			<!ELEMENT cuerpo (#PCDATA)>
+
+<!ELEMENT contraportada EMPTY>

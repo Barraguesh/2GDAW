@@ -1,0 +1,1 @@
+Get-Service -status -foregroundcolor "yellow"

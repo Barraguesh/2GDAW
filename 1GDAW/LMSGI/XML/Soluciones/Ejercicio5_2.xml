@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<pedido>
+    <fecha_pedido año="2012" mes="febrero" dia="20"/>
+
+    <datos_cliente>
+        <nombre>Ricardo</nombre>
+        <apellido>Movilla</apellido>
+        <direccion_cobro>
+            <calle>Avenida Gasteiz
+                <numero>56</numero>
+            </calle>
+            <ciudad>Vitoria</ciudad>
+            <codigo_postal>01012</codigo_postal>
+        </direccion_cobro>
+
+    </datos_cliente>
+    <datos_receptor>
+        <nombre>Ines</nombre>
+        <apellido>Abad</apellido>
+        <direccion_recepcion>
+            <calle>Plaza de la Duquesa
+                <numero>12</numero>
+            </calle>
+            <ciudad>Pamplona</ciudad>
+            <codigo_postal>31010</codigo_postal>
+        </direccion_recepcion>
+        <relacion_cliente>Esposa</relacion_cliente>
+    </datos_receptor>
+
+    <detalles_pedido>
+        <es_urgente boolean="True">
+            <razon>Cesped esta muy alto</razon>
+        </es_urgente>
+        <objetos_pedido>
+            <cortadora_cesped cod_producto="872-AA">
+                <precio euros="148,95"/>
+                <cantidad num="1"/>
+                <oferta boolean="True"/>
+                <otros>Sin información de que sea eléctrica</otros>
+            </cortadora_cesped>
+            <podadora cod_producto="926-FH">
+                <precio euros="7,98"/>
+                <cantidad num="3"/>
+                <oferta boolean="False"/>
+            </podadora>
+        </objetos_pedido>
+        <Importe_total euros="172,89"/>
+    </detalles_pedido>
+
+</pedido>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<empleados xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="empleados.xsd">
+    <empleado>
+        <codigo>323</codigo>
+        <datos>
+            <nombre>juan</nombre>
+            <apellido>perez</apellido>
+            <apellido>lopez</apellido>
+            <dni>16080961A</dni>
+        </datos>
+        <comision>49.8</comision>
+        <director>Javier</director>
+        <fecha_contratacion>2016-02-24</fecha_contratacion>
+    </empleado>
+</empleados>

@@ -1,0 +1,35 @@
+<!ELEMENT entrada (info_compra, info_ticket)>
+    <!ELEMENT info_compra (identificador, nombre, apellidos)>
+        <!ELEMENT identificador EMPTY>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT apellidos (#PCDATA)>
+
+        <!ATTLIST identificador id ID #REQUIRED>
+
+    <!ELEMENT info_ticket (emisor, nombre_show, fecha, direccion,
+            admision, localizacion, seccion, tipo_ticket, precio
+            reembolsable, admite_cambio, codigo_barras, observacion*)>
+        <!ELEMENT emisor (#PCDATA)>
+        <!ELEMENT nombre_show (#PCDATA)>
+        <!ELEMENT fecha EMPTY>
+            <!ATTLIST fecha dia (#PCDATA) #REQUIRED>
+            <!ATTLIST fecha hora (#PCDATA) #REQUIRED>
+
+        <!ELEMENT direccion (ciudad, lugar, calle)>
+            <!ELEMENT ciudad (#PCDATA)>
+            <!ELEMENT lugar (#PCDATA)>
+            <!ELEMENT calle (#PCDATA)>
+            <!ATTLIST calle numero (#PCDATA) #REQUIRED>
+
+        <!ELEMENT admision (#PCDATA)>
+        <!ELEMENT localizacion (#PCDATA)>
+        <!ELEMENT seccion (#PCDATA)>
+        <!ELEMENT tipo_ticket (#PCDATA)>
+        <!ELEMENT precio (#PCDATA)>
+            <!ATTLIST precio moneda (#PCDATA) #REQUIRED>
+
+        <!ELEMENT reembolsable (#PCDATA)>
+        <!ELEMENT admite_cambio (#PCDATA)>
+        <!ELEMENT codigo_barras (#PCDATA)>
+        <!ELEMENT observacion (#PCDATA)>
+

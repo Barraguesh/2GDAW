@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE universidad SYSTEM "8.dtd">
+
+<universidad>
+    <alumnos>
+        <alumno>
+            <datos>
+                <
+            </datos>
+            <matricula>
+                <asignatura codigo="">
+                    <creditos></creditos>
+                    <carrera></carrera>
+                </asignatura>
+                <nota/>
+            </matricula>
+        </alumno>
+    </alumnos>
+    <profesores>
+        <profesor>
+            <datos>
+                <
+            </datos>
+            <despacho></despacho>
+            <horariosTutorias></horariosTutorias>
+            <asignatura codigo="">
+                <creditos></creditos>
+                <carrera></carrera>
+            </asignatura>
+        </profesor>
+    </profesores>
+    <asignaturas>
+        <asignatura codigo="">
+            <creditos></creditos>
+            <carrera></carrera>
+        </asignatura>
+    </asignaturas>
+</universidad>

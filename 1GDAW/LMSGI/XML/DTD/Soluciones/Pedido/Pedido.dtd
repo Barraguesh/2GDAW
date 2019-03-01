@@ -1,0 +1,24 @@
+<!ELEMENT pedido (fecha, cliente, producto*, envio)>
+    <!ELEMENT fecha (dia, mes, anio)>
+        <!ELEMENT dia (#PCDATA)>
+        <!ELEMENT mes (#PCDATA)>
+        <!ELEMENT anio (#PCDATA)>
+
+<!ELEMENT cliente (nombre, apellido, direccion, ciudad, cod_postal)>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT apellido (#PCDATA)>
+        <!ELEMENT direccion (#PCDATA)>
+        <!ELEMENT ciudad (#PCDATA)>
+        <!ELEMENT cod_postal (#PCDATA)>
+
+<!ELEMENT producto (precio, cantidad)>
+    <!ATTLIST producto
+                cod ID #REQUIRED
+                nomb CDATA #REQUIRED>
+    <!ELEMENT precio (#PCDATA)>
+        <!ATTLIST precio
+                    moneda CDATA #IMPLIED>
+    <!ELEMENT cantidad (#PCDATA)>
+
+<!ELEMENT envio (nombre, apellido, direccion, ciudad, cod_postal)>
+

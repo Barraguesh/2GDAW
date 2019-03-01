@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="agenda" type="tipo_agenda"/>
+
+  <xs:complexType name="tipo_agenda">
+    <xs:sequence>
+      <xs:element name="contacto" type="tipo_contacto"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tipo_contacto">
+    <xs:sequence>
+      <xs:element name="Nombre" type="xs:string"/>
+      <xs:element name="Direccion" type="xs:string"/>
+      <xs:element name="Ciudad" type="xs:string"/>
+      <xs:element name="Provincia" type="xs:string"/>
+      <xs:element name="Codigo_Postal" type="xs:int"/>
+      <xs:element name="Numeros" type="tipo_numeros"/>
+      <xs:element name="Email" type="xs:string"/>
+      <xs:element name="Web" type="xs:string"/>
+      <xs:element name="Compania" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tipo_numeros">
+    <xs:sequence>
+      <xs:element name="Telefono" type="xs:int"/>
+      <xs:element name="Fax" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

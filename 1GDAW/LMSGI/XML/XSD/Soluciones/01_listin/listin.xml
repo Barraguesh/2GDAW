@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<listin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="listin.xsd">
+
+    <persona id="mgarciad" sexo="hombre">
+        <nombre>Marcos</nombre>
+        <email>mgarciadegodos@egibide.org</email>
+        <relacion enemigo_de="earbailz" amigo_de="mgarciad"/>
+    </persona>
+
+    <persona id="earbailz" sexo="mujer">
+        <nombre>Eider</nombre>
+        <email>earbailza@egibide.org</email>
+        <relacion amigo_de="mgarciad"/>
+    </persona>
+
+</listin>

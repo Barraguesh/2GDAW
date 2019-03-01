@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE entrada SYSTEM "../DTD/simulacro_examen_ej1.dtd">
+<entrada xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../XSD/simulacro_examen_ej1.xsd">
+    <info_compra>
+        <identificador id="561565"/>
+        <nombre>Ion</nombre>
+        <apellidos>Jauregialzo Sarasola</apellidos>
+    </info_compra>
+    <info_ticket>
+        <emisor>EZTicketLive.com</emisor>
+        <nombre_show>Jackson Hole Rodeo</nombre_show>
+        <fecha dia="08/07/2013" hora="20:00"/>
+        <direccion>
+            <ciudad>Jackson</ciudad>
+            <lugar>Teton County Fairgrounds</lugar>
+            <calle numero="447">West Snow King Ave</calle>
+        </direccion>
+        <admision>General admision</admision>
+        <localizacion>Covered</localizacion>
+        <seccion>GA</seccion>
+        <tipo_ticket>Adulto</tipo_ticket>
+        <precio moneda="dolar">25.00</precio>
+        <reembolsable>No</reembolsable>
+        <admite_cambio>No</admite_cambio>
+        <codigo_barras>3018043</codigo_barras>
+        <observacion>This is your ticket</observacion>
+        <observacion>Do not loose or copy</observacion>
+    </info_ticket>
+</entrada>

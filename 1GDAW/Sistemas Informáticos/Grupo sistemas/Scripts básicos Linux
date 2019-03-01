@@ -1,0 +1,19 @@
+----Ejercicio 2
+#!/bin/bash
+if -n then
+    read -p "Introduce el nombre del directorio" nombredir
+    if test -d $nombredir then
+        mkdir $nombredir
+    else
+        "El directorio ya existe"
+    fi
+else
+    echo "Tienes que introducir un nombre"
+fi
+----Ejercicio 3
+#!/bin/bash
+ls -l $HOME
+
+----Ejercicio 4
+#!/bin/bash
+sed 's/nombre:apellido:edad/INSERT INTO TABLA VALUES("nombre","apellido",edad);/g' fichero.dat > paq.sql

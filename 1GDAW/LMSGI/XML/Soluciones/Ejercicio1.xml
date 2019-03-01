@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+    <listado>
+        <asignatura nombre="Matematicas">
+			<grupo codigo="2A">
+                <alumno>
+                    <nombre>Ibon</nombre>
+                    <apellido>Fernandez</apellido>
+                    <dia>12/12/10</dia>
+                    <hora>12:00</hora>
+                </alumno>
+                <alumno>
+                    <nombre>Elisa</nombre>
+                    <apellido>Ruiz</apellido>
+                    <dia>18/12/10</dia>
+                    <hora>13:00</hora>
+                </alumno>
+            </grupo>
+            <grupo codigo="2B">
+                <alumno>
+                    <nombre>Maite</nombre>
+                    <apellido>Elkorobarrutia</apellido>
+                    <dia>15/12/10</dia>
+                    <hora>14:00</hora>
+                </alumno>
+            </grupo>
+            <grupo codigo="3A">
+                <alumno>
+                    <nombre>Miren</nombre>
+                    <apellido>Luarizaristi</apellido>
+                    <dia>17/12/10</dia>
+                </alumno>
+            </grupo>
+        </asignatura>
+        <asignatura nombre="Informatica">
+            <grupo codigo="2A">
+                <alumno>
+                    <nombre>Jose</nombre>
+                    <apellido>Alonso</apellido>
+                    <dia>12/12/10</dia>
+                    <hora>12:00</hora>
+                </alumno>
+                <alumno>
+                    <nombre>Gorka</nombre>
+                    <apellido>Ruiz</apellido>
+                    <dia>18/12/10</dia>
+                    <hora>11:00</hora>
+                </alumno>
+            </grupo>
+            <grupo codigo="2B">
+                <alumno>
+                    <nombre>Jokin</nombre>
+                    <apellido>Via</apellido>
+                    <dia>13/12/10</dia>
+                    <hora>09:00</hora>
+                </alumno>
+                <alumno>
+                    <nombre>Amaia</nombre>
+                    <apellido>Jaso</apellido>
+                    <dia>15/12/10</dia>
+                    <hora>10:00</hora>
+                </alumno>
+            </grupo>
+        </asignatura>
+    </listado>

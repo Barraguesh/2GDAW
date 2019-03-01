@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE TrackingUpdateResponse SYSTEM "../DTD/simulacro_examen_ej3.dtd">
+<TrackingUpdateResponse>
+    <Status>En transito</Status>
+    <Order id="1" shipwireId="12" internalId="123" shipped="YES" returned="NO"
+    warehouse="5" shipper="65" shipperFullName="Envios S.A." shipDate="05-10-2016"
+    cancelDate="" delivered="NO" expectedDeliveryDate="7-10-2016" handling="care"
+    shipping="boat" packaging="box" insurance="NO" total="3" returnDate=""
+    returnCondition="GOOD" href="324" affiliateStatus="shipwireFulfilled" manuallyEdited="NO">
+        <TrackingNumber carrier="343" delivered="NO" summary="" summaryDate="" deliveryDate="" href="324">
+            789254687
+        </TrackingNumber>
+        <Holds>
+            <Hold>
+                <Date>06-10-2016</Date>
+                <Type>aduana</Type>
+                <Description>retencion en la aduana</Description>
+            </Hold>
+        </Holds>
+        <Items>
+            <Item>
+                <Code>6543</Code>
+                <Quantity>6</Quantity>
+                <UnitValue currency="eur">50</UnitValue>
+                <ItemData type="lotNumber">7855</ItemData>
+            </Item>
+        </Items>
+        <RelatedOrder type="parent" shipwireId="2314" internalId="4324">
+            <TrackingNumber carrier="343" delivered="NO" summary="" summaryDate="" deliveryDate="" href="324">
+                789254686
+            </TrackingNumber>
+        </RelatedOrder>
+    </Order>
+    <TotalOrders>1</TotalOrders>
+    <TotalShippedOrders>1</TotalShippedOrders>
+    <TotalProducts>1</TotalProducts>
+    <ResultsLimit>19</ResultsLimit>
+    <ResultsOffset>15</ResultsOffset>
+    <Bookmark>marcado</Bookmark>
+    <ProcessingTime units="horas">8</ProcessingTime>
+</TrackingUpdateResponse>
