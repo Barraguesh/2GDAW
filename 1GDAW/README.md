@@ -1,4 +1,4 @@
-Primer curso.
+Primer curso
 =====
 
 ###### Segundo curso [link](../2GDAW)
